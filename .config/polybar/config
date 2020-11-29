@@ -343,9 +343,12 @@ ramp-capacity-0 = "   "
 ramp-capacity-0-foreground = ${colors.alert}
 ramp-capacity-1 = "   "
 ramp-capacity-1-foreground = #ffb52a
-# A co tam! Nie potrzebujemy widziec bateri gdy jest do polowy pelna 😛
 ramp-capacity-2 = "   "
-ramp-capacity-3 = "   "
+# Adding more ramps to have alerted battery not at 24%
+ramp-capacity-3 = "   "
+ramp-capacity-4 = "   "
+ramp-capacity-5 = "   "
+ramp-capacity-6 = "   "
 ramp-capacity-foreground = ${colors.foreground-alt}
 
 animation-charging-0 = "   " 
