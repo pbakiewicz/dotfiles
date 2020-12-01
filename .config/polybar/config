@@ -7,6 +7,7 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 icons = #7C7C7C
+# to cos nie tak tutaj
 schowany = #CCCCCC
 
 [bar/base]
@@ -36,11 +37,10 @@ font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
 font-2 = siji:pixelsize=12;1
 font-3 = FontAwesome5Free:style=Solid:size=11:antialias=true;0
 font-4 = FontAwesome5Brands:style=Solid:size=12:antialias=true;2
-font-5 = Noto:pixelsize=13;1
+font-5 = Noto:pixelsize=12;1
 
-modules-left = i3
-modules-center = xwindow 
-modules-right = test alsa battery date wlan
+modules-left = i3 xwindow
+modules-right = alsa battery todo vpn date wlan
 
 tray-position = right
 tray-padding = 2
@@ -124,32 +124,21 @@ label-empty-padding = 2
 type = internal/i3
 format = <label-state> <label-mode>
 pin-workspaces = true
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3:
-ws-icon-3 = 4:
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-default = 
 
-
-label-mode-padding = 2
+label-mode-padding = 3
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%. %icon%
+label-focused = %index%
 label-focused-background = ${colors.background-alt}
 label-focused-foreground = #E6EAEB
-label-focused-underline= ${colors.primary}
+label-focused-underline=
 label-focused-padding = 3
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%. %icon%
-label-unfocused-padding = 2
+label-unfocused = %index%
+label-unfocused-padding = 3
 label-unfocused-foreground = #696C71
 
 ; visible = Active workspace on unfocused monitor
@@ -159,9 +148,9 @@ label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent =  %index%. %icon%
+label-urgent =  %index%
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 3
 
 [module/mpd]
 type = internal/mpd
@@ -240,17 +229,14 @@ format-disconnected-foreground = ${colors.alert}
 
 
 [module/date]
-type = internal/date
-interval = 1
-
-date = 
-date-alt = "%Y-%m-%d"
-
-time = %H:%M
-time-alt = 
+type = custom/script
+interval = 5
+exec = date +"%H:%M"
 
 # Te cale %T6 pobiera po prostu font-5 👻
-label =" %{T6}%time% %date%%{T-}"
+label =" %{T6}%output%%{T-}"
+#click-left = termite -e 'bash -c "khal calendar;bash"'
+click-left = termite -e 'bash -c "cal 2020;bash"'
 
 
 [module/pulseaudio]
@@ -298,13 +284,13 @@ type = internal/pulseaudio
 format-volume = <bar-volume> <label-volume> 
 label-volume-foreground = ${colors.schowany}
 
-format-muted-prefix = ""
+format-muted-prefix =
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = sound muted
 
 max-volume=true
 
-bar-volume-width = 10
+bar-volume-width = 6
 bar-volume-foreground-0 = #55aa55
 bar-volume-foreground-1 = #55aa55
 bar-volume-foreground-2 = #55aa55
@@ -321,10 +307,18 @@ bar-volume-empty = -
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
-[module/test]
+[module/todo]
 type = custom/script
-exec = echo "%{A1:notify-send "hellow":} cicl me %{A}"
+exec = showTODOs
 interval = 0 
+format-foreground = ${colors.icons}
+
+[module/vpn]
+type = custom/script
+exec = /home/pawel/bin/polybar/vpn
+interval = 0
+format-foreground = ${colors.icons}
+click-left = termite -e 'bash -c "khal calendar;bash"'
 
 [module/battery]
 type = internal/battery
