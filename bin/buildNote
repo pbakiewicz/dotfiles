@@ -3,6 +3,7 @@
 filename=$1
 target="$(dirname "$filename")/pdf"
 outputFile="$(basename "$filename" .md).pdf"
+echo $(ls $(dirname $filename) | grep .*md)
 
 mkdir -p $target
 
