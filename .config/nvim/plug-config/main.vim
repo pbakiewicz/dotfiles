@@ -56,4 +56,5 @@ set pyx=3
 
 "For exporting to pdf on every *note* file save
 autocmd BufWritePost note-*.md silent !buildNote %:p
+autocmd BufWritePost todos.md silent !buildTODO
 

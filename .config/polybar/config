@@ -40,7 +40,7 @@ font-4 = FontAwesome5Brands:style=Solid:size=12:antialias=true;2
 font-5 = Noto:pixelsize=12;1
 
 modules-left = i3 xwindow
-modules-right = alsa battery todo vpn date wlan
+modules-right = alsa battery  vpn date wlan
 
 tray-position = right
 tray-padding = 2
@@ -315,10 +315,11 @@ format-foreground = ${colors.icons}
 
 [module/vpn]
 type = custom/script
-exec = /home/pawel/bin/polybar/vpn
+exec = /home/pawel/bin/polybar/vpn.sh
 interval = 0
 format-foreground = ${colors.icons}
-click-left = termite -e 'bash -c "khal calendar;bash"'
+click-left=/home/pawel/bin/polybar/vpn-toggle.sh
+#click-left = termite -e 'bash -c "khal calendar;bash"'
 
 [module/battery]
 type = internal/battery
