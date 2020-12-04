@@ -1,0 +1,9 @@
+#!/bin/sh
+
+todoFilename="$HOME/Dropbox/notes/todos.md"
+today="$(date +%Y-%m-%d)"
+nvim -c "norm G" \
+				-c "norm o" \
+				-c "norm i-  | $today" \
+				-c "norm 2Bh" \
+				-c "startinsert" $todoFilename
