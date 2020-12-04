@@ -88,7 +88,8 @@ bindsym $mod+Shift+i exec /home/pawel/bin/mostRecentNote
 
 # For floating terminal
 for_window [ title="floating_terminal" ] floating enable
-bindsym $mod+t exec termite -t floating_terminal
+bindsym $mod+t exec termite -e /home/pawel/bin/todotaker -t floating_terminal
+bindsym $mod+Shift+t exec zathura /home/pawel/o/notes/pdf/todos.pdf
 
 # 💡 After longer fight light actually did the trick not xbacklight
 bindsym XF86MonBrightnessUp exec sudo light -A 5 # increase screen brightness
