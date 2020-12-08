@@ -1,5 +1,4 @@
 #!/bin/sh
-
 todoFile="/home/pawel/o/notes/todos.md"
 
 target="$(dirname "$todoFile")/pdf"
@@ -10,3 +9,5 @@ mkdir -p $target
 pandoc \
 				--pdf-engine=xelatex \
 				-o "$target/$outputFile" $todoFile &
+
+notify-send "TODOs has been built"

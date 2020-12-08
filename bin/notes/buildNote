@@ -6,6 +6,8 @@ outputFile="$(basename "$filename" .md).pdf"
 
 mkdir -p $target
 
+notify-send "Building notes"
+
 pandoc \
 				--pdf-engine=xelatex \
 				-o "$target/$outputFile" $filename &
