@@ -1,3 +1,3 @@
 #!/bin/sh
 
-ls -r ~/Dropbox/notes/pdf/note-*.pdf | head -n1 | xargs zathura
+ls -r ~/Dropbox/notes/pdf/note-*.pdf | xargs -n1 zathura
