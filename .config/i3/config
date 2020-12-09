@@ -83,12 +83,12 @@ exec_always --no-startup-id dunst
 
 # For floating notetaker 
 for_window [ title="floating_notetaker" ] floating enable
-bindsym $mod+i exec termite -e /home/pawel/bin/notetaker -t floating_notetaker
-bindsym $mod+Shift+i exec /home/pawel/bin/mostRecentNote
+bindsym $mod+i exec termite -e /home/pawel/bin/notes/notetaker -t floating_notetaker
+bindsym $mod+Shift+i exec /home/pawel/bin/notes/mostRecentNote
 
 # For floating terminal
 for_window [ title="floating_terminal" ] floating enable
-bindsym $mod+t exec termite -e /home/pawel/bin/todotaker -t floating_terminal
+bindsym $mod+t exec termite -e /home/pawel/bin/notes/todotaker -t floating_terminal
 bindsym $mod+Shift+t exec zathura /home/pawel/o/notes/pdf/todos.pdf
 
 # 💡 After longer fight light actually did the trick not xbacklight
