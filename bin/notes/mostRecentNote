@@ -1,3 +1,7 @@
 #!/bin/sh
 
-ls -r ~/Dropbox/notes/pdf/note-*.pdf | xargs -n1 zathura
+if [ $1 = "all" ]; then
+				ls -r ~/Dropbox/notes/pdf/note-*.pdf | xargs -n1 zathura
+else
+				ls -r ~/Dropbox/notes/pdf/note-*.pdf | head -n1 | xargs zathura
+fi

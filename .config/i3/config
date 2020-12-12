@@ -85,6 +85,7 @@ exec_always --no-startup-id dunst
 for_window [ title="floating_notetaker" ] floating enable
 bindsym $mod+i exec termite -e /home/pawel/bin/notes/notetaker -t floating_notetaker
 bindsym $mod+Shift+i exec /home/pawel/bin/notes/mostRecentNote
+bindsym $mod+Shift+a exec /home/pawel/bin/notes/mostRecentNote all
 
 # For floating terminal
 for_window [ title="floating_terminal" ] floating enable
