@@ -10,4 +10,6 @@ notify-send "Building notes"
 
 pandoc \
 				--pdf-engine=xelatex \
+				-V "mainfont:DejaVu Sans" \
+				-V "geometry:margin=0in" \
 				-o "$target/$outputFile" $filename &
