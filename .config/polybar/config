@@ -40,7 +40,7 @@ font-4 = FontAwesome5Brands:style=Solid:size=12:antialias=true;2
 font-5 = Noto:pixelsize=12;1
 
 modules-left = i3 xwindow
-modules-right = alsa battery  vpn date wlan
+modules-right = btc alsa battery  vpn date wlan
 
 tray-position = right
 tray-padding = 2
@@ -227,6 +227,11 @@ format-disconnected-foreground = ${colors.alert}
 #format-prefix = "  "
 #format-prefix-foreground = #5F758E
 
+[module/btc]
+type = custom/script
+interval = 10
+exec = /home/pawel/bin/polybar/btc.sh
+label = "%output%"
 
 [module/date]
 type = custom/script
