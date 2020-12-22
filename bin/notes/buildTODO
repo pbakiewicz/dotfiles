@@ -6,6 +6,8 @@ outputFile="$(basename "$todoFile" .md).pdf"
 
 mkdir -p $target
 
+sortTODO.py $todoFile
+
 pandoc \
 				--pdf-engine=xelatex \
 				-o "$target/$outputFile" $todoFile &
