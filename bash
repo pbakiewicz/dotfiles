@@ -9,6 +9,11 @@ alias ls='ls --color=auto'
 alias grep='grep -i'
 PS1='[\u@\h \W]\$ '
 
+# Starting terminal in tmux
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
+
 # History
 export HISTTIMEFORMAT="%h %d %H:%M:%S"
 export HISTCONTROL=erasedups
