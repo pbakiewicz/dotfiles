@@ -6,6 +6,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'unblevable/quick-scope'
 Plug 'mhinz/vim-startify'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
 call plug#end()
 
 let mapleader = ","
