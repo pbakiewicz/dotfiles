@@ -8,6 +8,8 @@ Plug 'unblevable/quick-scope'
 Plug 'mhinz/vim-startify'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
+Plug 'justinmk/vim-sneak'
+
 call plug#end()
 
 let mapleader = ","
@@ -21,3 +23,4 @@ source $HOME/.config/nvim/plug-config/python.vim
 source $HOME/.config/nvim/plug-config/ag.vim
 source $HOME/.config/nvim/plug-config/ctrlp.vim
 source $HOME/.config/nvim/plug-config/quickscope.vim
+source $HOME/.config/nvim/plug-config/sneak.vim
