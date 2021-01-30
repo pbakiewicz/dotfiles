@@ -14,13 +14,13 @@ call plug#end()
 
 let mapleader = ","
 
-source $HOME/.config/nvim/plug-config/main.vim
-source $HOME/.config/nvim/plug-config/coc.vim
-source $HOME/.config/nvim/plug-config/startify.vim
-source $HOME/.config/nvim/plug-config/fugitive.vim
-source $HOME/.config/nvim/plug-config/nerdtree.vim
-source $HOME/.config/nvim/plug-config/python.vim
-source $HOME/.config/nvim/plug-config/ag.vim
-source $HOME/.config/nvim/plug-config/ctrlp.vim
-source $HOME/.config/nvim/plug-config/quickscope.vim
-source $HOME/.config/nvim/plug-config/sneak.vim
+source plug-config/main.vim
+source plug-config/coc.vim
+source plug-config/startify.vim
+source plug-config/fugitive.vim
+source plug-config/nerdtree.vim
+source plug-config/python.vim
+source plug-config/ag.vim
+source plug-config/ctrlp.vim
+source plug-config/quickscope.vim
+source plug-config/sneak.vim
