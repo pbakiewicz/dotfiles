@@ -30,6 +30,7 @@ alias va="rg --files --no-messages -g '!sys' -g '!proc' -g '!boot' / | fzf | xar
 export PATH="/home/pawel/bin/notes/:$PATH"
 export PATH="/home/pawel/.local/bin/:$PATH"
 export PATH="/home/pawel/bin/:$PATH"
+export PATH="/home/pawel/bin/ssh/:$PATH"
 # For npm global
 export PATH="/home/pawel/.npm-global/bin:$PATH"
 
