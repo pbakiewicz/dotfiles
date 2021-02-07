@@ -22,7 +22,7 @@ alias vim=nvim
 alias n=newsboat
 
 # Fzfing all files starting from ~ direcotry
-alias v="rg --files --no-messages --follow -g '!.git' ~| fzf | xargs -r nvim"
+alias v="rg --files --no-messages  --hidden $HOME/dotfiles/ -g '!.git'| fzf | xargs -r nvim"
 alias vi="fzf | xargs -r nvim"
 alias va="rg --files --no-messages -g '!sys' -g '!proc' -g '!boot' / | fzf | xargs -r nvim"
 
