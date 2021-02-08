@@ -11,7 +11,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # }}}
 
 # {{{ shortcuts
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec termite -e tmux
 bindsym $mod+n kill
 bindsym $mod+d exec dmenu_run
 bindsym $mod+g exec google-chrome-stable
@@ -91,7 +91,7 @@ exec_always --no-startup-id dunst
 
 # For floating notetaker 
 for_window [ title="floating_notetaker" ] floating enable
-bindsym $mod+i exec termite -e /home/pawel/bin/notes/notetaker -t floating_notetaker
+bindsym $mod+u exec termite -e /home/pawel/bin/notes/notetaker -t floating_notetaker
 bindsym $mod+Shift+i exec /home/pawel/bin/notes/randomNote
 
 # For floating terminal
