@@ -243,6 +243,7 @@ let g:startify_change_to_dir = 0
 command Greview :Git diff --staged
 nnoremap <leader>gr :Greview<cr>
 nnoremap <leader>gc :Gcommit<cr>
+nnoremap <leader>gs :Gstatus<cr>
 "}}}
 
 "{{{ NerdTree
