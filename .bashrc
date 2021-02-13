@@ -10,21 +10,22 @@ alias grep='grep -i'
 PS1='[\u@\h \W]\$ '
 
 # Starting terminal in tmux
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
-fi
+#if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#  exec tmux
+#fi
 
 # History
 export HISTTIMEFORMAT="%h %d %H:%M:%S"
 export HISTCONTROL=erasedups
 export HISTSIZE=100000
+
+# {{{ aliases
 alias vim=nvim
 alias n=newsboat
-
-# Fzfing all files starting from ~ direcotry
 alias v="rg --files --no-messages  --hidden $HOME/dotfiles/ -g '!.git'| fzf | xargs -r nvim"
 alias vi="fzf | xargs -r nvim"
 alias va="rg --files --no-messages -g '!sys' -g '!proc' -g '!boot' / | fzf | xargs -r nvim"
+# }}}
 
 # Other bins like youtube-dl
 export PATH="/home/pawel/bin/notes/:$PATH"
