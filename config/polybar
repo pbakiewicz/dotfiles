@@ -7,12 +7,11 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 icons = #7C7C7C
-# to cos nie tak tutaj
 schowany = #CCCCCC
 
 [bar/base]
 width = 100%
-height = 35
+height = 44
 radius = 0.0
 fixed-center = false
 enable-ipc = true
@@ -38,9 +37,11 @@ font-2 = siji:pixelsize=12;1
 font-3 = FontAwesome5Brands:style=Solid:size=12:antialias=true;2
 font-4 = FontAwesome5Free:style=Solid:size=11:antialias=true;0
 font-5 = Noto:pixelsize=12;1
+font-6 = BreezeSans:pixelsize=10:style=Bold Condensed;-7
+font-7 = BreezeSans:pixelsize=10:style=Bold Condensed;10
 
 modules-left = i3 xwindow
-modules-right = btc eth alsa battery  vpn date wlan
+modules-right = btc eth alsa battery  vpn wlan date
 
 tray-position = right
 tray-padding = 2
@@ -208,16 +209,15 @@ type = internal/network
 interface = wlo1
 interval = 3.0
 
-format-connected = <label-connected>
-#label-connected = %essid%
-#label-connected = 
-# a miejmy znak wykrzyknika tylko gdy nie ma wifi. Jak jest to po co pokazywac?
-label-connected=
+format-connected = <ramp-signal>  <label-connected>
+label-connected = %{T7}%upspeed%%{T-}%{O-40}%{T8}%downspeed%%{T-}
 label-connected-foreground = ${colors.icons}
 
 format-disconnected = <label-disconnected>
 label-disconnected = 
 format-disconnected-foreground = ${colors.alert}
+
+ramp-signal-0 = 
 
 #[module/day]
 #type = internal/date
@@ -229,8 +229,8 @@ format-disconnected-foreground = ${colors.alert}
 
 [module/btc]
 type = custom/ipc
-hook-0 = echo ""
-hook-1 = $HOME/bin/polybar/crypto.sh BTC
+hook-0 = $HOME/bin/polybar/crypto.sh -d btc
+hook-1 = $HOME/bin/polybar/crypto.sh btc
 label = "%output%"
 initial = 1
 click-left = polybar-msg hook btc 2
@@ -239,8 +239,8 @@ click-right = polybar-msg hook btc 1
 
 [module/eth]
 inherit = module/btc
-hook-0 = echo ""
-hook-1 = $HOME/bin/polybar/crypto.sh ETH 
+hook-0 = $HOME/bin/polybar/crypto.sh -d eth 
+hook-1 = $HOME/bin/polybar/crypto.sh eth 
 click-left = polybar-msg hook eth 2
 double-click-left = polybar-msg hook eth 1
 click-right = polybar-msg hook eth 1
