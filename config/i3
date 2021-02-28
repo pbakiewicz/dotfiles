@@ -82,12 +82,15 @@ bindsym $mod+Ctrl+k resize shrink height 10 px or 10 ppt
 bindsym $mod+Ctrl+l resize grow width 10 px or 10 ppt
 # }}}
 
+# {{{ Startup applications
 set $RANDOM_WALLPAPER = $(find "/home/pawel/o/pics/wallpapers" -type f | sort -R | tail -1)
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-fill $RANDOM_WALLPAPER
+exec_always --no-startup-id birdtray
 
 # Powinno wystarczyc dodanie servicu do /usr/share/dbus-1/services/ ale jakos nie wystarcza :(
 exec_always --no-startup-id dunst
+# }}}
 
 # For floating notetaker 
 for_window [ title="floating_notetaker" ] floating enable
