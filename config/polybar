@@ -1,17 +1,17 @@
 [colors]
-background = #222
-background-alt = #444
-foreground = #dfdfdf
-foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
-icons = #7C7C7C
+background = ${xrdb:color0:#222}
+background-alt  = ${xrdb:color1:#222}
+foreground = ${xrdb:color7:#222}
+foreground-alt = ${xrdb:color6:#222}
+primary = ${xrdb:color1:#222}
+secondary = ${xrdb:color2:#222}
+alert = ${xrdb:color3:#222}
+icons = ${xrdb:color2:#222}
 schowany = #CCCCCC
 
 [bar/base]
 width = 100%
-height = 44
+height = 36 
 radius = 0.0
 fixed-center = false
 enable-ipc = true
@@ -39,12 +39,15 @@ font-4 = FontAwesome5Free:style=Solid:size=11:antialias=true;0
 font-5 = Noto:pixelsize=12;1
 font-6 = BreezeSans:pixelsize=10:style=Bold Condensed;-7
 font-7 = BreezeSans:pixelsize=10:style=Bold Condensed;10
+font-8 = BreezeSans:pixelsize=10:style=Bold Condensed;-10
+font-9 = FontAwesome5Free:style=Solid:size=11:antialias=true;0
 
-modules-left = i3 xwindow
-modules-right = btc eth alsa battery  vpn wlan date
+modules-left = i3
+modules-center = xwindow
+modules-right = alsa battery vpn day wlan
 
 tray-position = right
-tray-padding = 2
+tray-padding = 0
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
@@ -127,13 +130,13 @@ format = <label-state> <label-mode>
 pin-workspaces = true
 
 label-mode-padding = 3
-label-mode-foreground = #000
+label-mode-foreground = ${colors.foreground} 
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
-label-focused-foreground = #E6EAEB
+label-focused-foreground = ${colors.background} 
 label-focused-underline=
 label-focused-padding = 3
 
@@ -209,7 +212,8 @@ type = internal/network
 interface = wlo1
 interval = 3.0
 
-format-connected = <ramp-signal>  <label-connected>
+#format-connected = <ramp-signal>  <label-connected>
+format-connected = 
 label-connected = %{T7}%upspeed%%{T-}%{O-40}%{T8}%downspeed%%{T-}
 label-connected-foreground = ${colors.icons}
 
@@ -219,13 +223,14 @@ format-disconnected-foreground = ${colors.alert}
 
 ramp-signal-0 = 
 
-#[module/day]
-#type = internal/date
-#interval = 3600
-#date = "%Y-%m-%d"
-#
-#format-prefix = "  "
-#format-prefix-foreground = #5F758E
+[module/day]
+type = internal/date
+interval = 1
+date = " %b %d %H:%M "
+
+#format-prefix = " "
+format-prefix-foreground = ${colors.background-alt}
+format-background = ${colors.background}
 
 [module/btc]
 type = custom/ipc
@@ -346,22 +351,23 @@ full-at = 98
 
 format-charging = <animation-charging>
 #format-discharging = <ramp-capacity><label-discharging>
-format-discharging = <ramp-capacity><label-discharging>
+format-discharging = <ramp-capacity> <label-discharging>
 label-discharging = %percentage%%
 label-discharging-foreground = ${colors.schowany}
 format-full =
 
+ramp-capacity-font = 10
 ramp-capacity-0 = "   "
 ramp-capacity-0-foreground = ${colors.alert}
 ramp-capacity-1 = "   "
-ramp-capacity-1-foreground = #ffb52a
+ramp-capacity-1-foreground = ${colors.icons}
 ramp-capacity-2 = "   "
 # Adding more ramps to have alerted battery not at 24%
 ramp-capacity-3 = "   "
 ramp-capacity-4 = "   "
 ramp-capacity-5 = "   "
 ramp-capacity-6 = "   "
-ramp-capacity-foreground = ${colors.foreground-alt}
+ramp-capacity-foreground = ${colors.icons}
 
 animation-charging-0 = "   " 
 animation-charging-1 = "   " 
