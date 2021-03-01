@@ -11,7 +11,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # }}}
 
 # {{{ shortcuts
-bindsym $mod+Return exec termite -e tmux
+bindsym $mod+Return exec termite
+bindsym $mod+Shift+Return exec termite -t floating_terminal
 bindsym $mod+n kill
 bindsym $mod+d exec dmenu_run
 bindsym $mod+g exec google-chrome-stable
@@ -83,9 +84,9 @@ bindsym $mod+Ctrl+l resize grow width 10 px or 10 ppt
 # }}}
 
 # {{{ Startup applications
-set $RANDOM_WALLPAPER = $(find "/home/pawel/o/pics/wallpapers" -type f | sort -R | tail -1)
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id feh --bg-fill $RANDOM_WALLPAPER
+exec_always --no-startup-id /home/pawel/bin/walp.sh
+exec_always --no-startup-id picom
 exec_always --no-startup-id birdtray
 
 # Powinno wystarczyc dodanie servicu do /usr/share/dbus-1/services/ ale jakos nie wystarcza :(
