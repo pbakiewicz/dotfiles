@@ -232,24 +232,6 @@ date = " %b %d %H:%M "
 format-prefix-foreground = ${colors.background-alt}
 format-background = ${colors.background}
 
-[module/btc]
-type = custom/ipc
-hook-0 = $HOME/bin/polybar/crypto.sh -d btc
-hook-1 = $HOME/bin/polybar/crypto.sh btc
-label = "%output%"
-initial = 1
-click-left = polybar-msg hook btc 2
-double-click-left = polybar-msg hook btc 1
-click-right = polybar-msg hook btc 1
-
-[module/eth]
-inherit = module/btc
-hook-0 = $HOME/bin/polybar/crypto.sh -d eth 
-hook-1 = $HOME/bin/polybar/crypto.sh eth 
-click-left = polybar-msg hook eth 2
-double-click-left = polybar-msg hook eth 1
-click-right = polybar-msg hook eth 1
-
 [module/date]
 type = custom/script
 interval = 5
