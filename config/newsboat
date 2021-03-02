@@ -1,7 +1,7 @@
 auto-reload yes
 
-notify-program /usr/bin/notify-send
-notify-format "Newsboat: %d new things"
+# notify-program /usr/bin/notify-send
+# notify-format "Newsboat: %d new things"
 
 bind-key j down
 bind-key k up 
