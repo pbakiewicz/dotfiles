@@ -6,10 +6,13 @@ outputFile="$(basename "$todoFile" .md).pdf"
 
 mkdir -p $target
 
-sortTODO.py $todoFile
+
+sortedFile=$(sortTODO.py $todoFile)
+
+echo $sortedFile
 
 pandoc \
 				--pdf-engine=xelatex \
-				-o "$target/$outputFile" $todoFile &
+				-o "$target/$outputFile" $sortedFile &
 
 notify-send "TODOs has been built"

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-todoFilename="/home/pawel/Dropbox/notes/todos.md"
+todoFilename="/home/pawel/o/notes/todos.md"
 today="$(date +%Y-%m-%d)"
 nvim -c "norm G" \
 				-c "norm o" \

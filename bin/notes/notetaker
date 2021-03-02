@@ -1,6 +1,6 @@
 #!/bin/sh
 
-noteFilename="$HOME/Dropbox/notes/note-$(date +%Y-%m-%d).md"
+noteFilename="$HOME/o/notes/note-$(date +%Y-%m-%d).md"
 today="$(date +%Y-%m-%d)"
 
 if [ -f $noteFilename ] && [ $(grep "$today" $noteFilename | wc -l) -eq 1 ]
