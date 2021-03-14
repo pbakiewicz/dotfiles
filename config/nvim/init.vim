@@ -44,29 +44,29 @@ set pyx=3 "for nvim python version
 "}}}2
 
 "{{{2 Shortcuts
-map <leader>, :w<CR>
-map <leader>. :wq<CR>
+nnoremap <leader>, :w<CR>
+nnoremap <leader>. :wq<CR>
 
 :map <C-h> <C-w>h
 :map <C-j> <C-w>j
 :map <C-k> <C-w>k
 :map <C-l> <C-w>l
 "Buffers
-nnoremap <TAB> :bnext<CR>
-nnoremap <S-TAB> :bprevious<CR>
+nmap <TAB> :bnext<CR>
+nmap <S-TAB> :bprevious<CR>
 " Shortcuts for tabs
-nnoremap gn :tabnew<CR>
-nnoremap gk :tabnext<CR>
-nnoremap gj :tabprev<CR>
+nmap gn :tabnew<CR>
+nmap gk :tabnext<CR>
+nmap gj :tabprev<CR>
 " quick escaping
-inoremap jk <Esc>
-inoremap kj <Esc>
+imap jk <Esc>
+imap kj <Esc>
 
 " resizing
-nnoremap <M-j> :resize -2<CR>
-nnoremap <M-k> :resize +2<CR>
-nnoremap <M-h> :vertical resize -2<CR>
-nnoremap <M-l> :vertical resize +2<CR>
+nmap <M-j> :resize -2<CR>
+nmap <M-k> :resize +2<CR>
+nmap <M-h> :vertical resize -2<CR>
+nmap <M-l> :vertical resize +2<CR>
 
 "TODO: check why <C-m> gave wiers in fugitive
 map ]q :cnext<CR>
