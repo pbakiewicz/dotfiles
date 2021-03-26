@@ -14,7 +14,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+Return exec termite
 bindsym $mod+Shift+Return exec termite -t floating_terminal
 bindsym $mod+n kill
-bindsym $mod+d exec rofi -show drun -show-icons
+bindsym $mod+d exec "rofi -combi-modi window,drun -show combi -modi emoji combi -show-icons"
 
 bindsym $mod+Shift+d exec dmenu-config.sh
 bindsym $mod+g exec google-chrome-stable
