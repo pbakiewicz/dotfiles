@@ -16,12 +16,13 @@ call plug#end()
 
 "{{{ Main settings
 let mapleader = ","
+let maplocalleader = ","
 syntax on " highlight stuff
 colorscheme darkblue
 
 "{{{2 Variables
 "set nowrap "wrapping is bad - PS but not really for small floating windows
-set cursorline " highlight line with cursor
+" set cursorline " highlight line with cursor
 set clipboard=unnamedplus " copying to default clipboard
 set splitbelow splitright " normal splitting
 set mouse=a " use mouse
@@ -41,11 +42,13 @@ set t_Co=256
 " set termguicolors
 set foldmethod=marker " Folding with {{{ - }}}
 set pyx=3 "for nvim python version
+
+set scrolloff=8 " starts scrolling after 8 line
+" set nohlsearch " stop highlighting after enter
 "}}}2
 
 "{{{2 Shortcuts
-nnoremap <leader>, :w<CR>
-nnoremap <leader>. :wq<CR>
+nnoremap <leader><leader> :w<CR>
 
 :map <C-h> <C-w>h
 :map <C-j> <C-w>j
@@ -68,9 +71,11 @@ nmap <M-k> :resize +2<CR>
 nmap <M-h> :vertical resize -2<CR>
 nmap <M-l> :vertical resize +2<CR>
 
-"TODO: check why <C-m> gave wiers in fugitive
+map <c-q> :call ToggleQuickFix()<CR>
 map ]q :cnext<CR>
 map [q :cprev<CR>
+
+nmap <leader>ev :vsplit $MYVIMRC<cr>
 ""}}}2
 
 "For yaml to have 2 spaces not weird tabs
@@ -78,6 +83,9 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 "For exporting to pdf on every *note* file save
 autocmd BufWritePost note-*.md silent !buildNote %:p
 autocmd BufWritePost todos.md silent !buildTODO
+
+
+:autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
 "}}}
 
 "{{{ Coc settings
@@ -312,4 +320,14 @@ let g:qs_max_chars=150
 
 "{{{ Sneak
 let sneak#label = 1
+"}}}
+
+"{{{ functions
+function! ToggleQuickFix()
+    if empty(filter(getwininfo(), 'v:val.quickfix'))
+        copen
+    else
+        cclose
+    endif
+endfunction
 "}}}
