@@ -16,6 +16,15 @@ abbr ... "cd ../.."
 # sourcing autojump
 . /home/pawel/.autojump/share/autojump/autojump.fish
 
+# Making cd always displayin dir content
+function cd
+    if count $argv > /dev/null
+	builtin cd "$argv"; and ls
+    else
+	builtin cd ~; and ls
+    end
+end
+    
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
