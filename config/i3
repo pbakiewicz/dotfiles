@@ -96,11 +96,6 @@ exec_always --no-startup-id blueman-applet
 exec_always --no-startup-id dunst
 # }}}
 
-# For floating notetaker 
-for_window [ title="floating_notetaker" ] floating enable
-bindsym $mod+u exec termite -e /home/pawel/bin/notes/notetaker -t floating_notetaker
-bindsym $mod+Shift+i exec /home/pawel/bin/notes/randomNote
-
 # For floating terminal
 for_window [ title="floating_terminal" ] floating enable
 bindsym $mod+t exec termite -e /home/pawel/bin/notes/todotaker -t floating_terminal

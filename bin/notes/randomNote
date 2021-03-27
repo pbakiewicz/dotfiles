@@ -1,2 +1,0 @@
-#!/bin/sh
-ls ~/o/notes/pdf/note-*.pdf | shuf -n1 | xargs zathura
