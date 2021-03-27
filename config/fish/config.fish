@@ -1,6 +1,5 @@
 set -U fish_greeting # No greeting
 
-set -gx PATH /home/pawel/bin/notes/ $PATH
 set -gx PATH /home/pawel/.local/bin/ $PATH
 set -gx PATH /home/pawel/bin/ $PATH
 set -gx PATH /home/pawel/bin/ssh/ $PATH
