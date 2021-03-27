@@ -31,8 +31,8 @@ set backspace=indent,eol,start " backspace deletes everyhing
 set nobackup " recommended by coc
 set nowritebackup " recommended by coc
 set noshowmode " no ---INSERT -- anymore
-set showtabline=2 "always show tabs
-set tabstop=2 "bigger tabs
+set showtabline=2 "always show tabs names, even with one tab
+set tabstop=8 softtabstop=4 shiftwidth=4 noexpandtab
 "hi Normal guibg=NONE ctermbg=NONE " transparent backgorund
 "Better colors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -78,8 +78,6 @@ map [q :cprev<CR>
 nmap <leader>ev :vsplit $MYVIMRC<cr>
 ""}}}2
 
-"For yaml to have 2 spaces not weird tabs
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 "For exporting to pdf on every *note* file save
 autocmd BufWritePost note-*.md silent !buildNote %:p
 autocmd BufWritePost todos.md silent !buildTODO
