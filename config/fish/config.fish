@@ -14,6 +14,9 @@ abbr va "rg --files --no-messages -g '!sys' -g '!proc' -g '!boot' / | fzf | xarg
 abbr .. "cd .."
 abbr ... "cd ../.."
 # }}}
+# sourcing autojump
+. /home/pawel/.autojump/share/autojump/autojump.fish
+
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
