@@ -8,9 +8,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'unblevable/quick-scope'
 Plug 'mhinz/vim-startify'
 Plug 'francoiscabrol/ranger.vim'
-Plug 'rbgrouleff/bclose.vim'
 Plug 'justinmk/vim-sneak'
-Plug 'dylanaraps/wal.vim'
 call plug#end()
 "}}}
 
