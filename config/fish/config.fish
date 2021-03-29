@@ -29,3 +29,9 @@ end
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
 cat ~/.cache/wal/sequences &
+
+if status is-interactive
+and not set -q TMUX
+    exec tmux
+end
+
