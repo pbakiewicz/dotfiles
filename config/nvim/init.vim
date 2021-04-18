@@ -1,6 +1,5 @@
 "{{{ Plugin installed
 call plug#begin()
-Plug 'preservim/nerdtree'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
@@ -8,6 +7,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'unblevable/quick-scope'
 Plug 'mhinz/vim-startify'
 Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
 Plug 'justinmk/vim-sneak'
 call plug#end()
 "}}}
@@ -42,7 +42,8 @@ set foldmethod=marker " Folding with {{{ - }}}
 set pyx=3 "for nvim python version
 
 set scrolloff=8 " starts scrolling after 8 line
-" set nohlsearch " stop highlighting after enter
+set nohlsearch " stop highlighting after enter
+set shell=/bin/bash " For getting terminal output right
 "}}}2
 
 "{{{2 Shortcuts
@@ -72,6 +73,8 @@ nmap <M-l> :vertical resize +2<CR>
 map <c-q> :call ToggleQuickFix()<CR>
 map ]q :cnext<CR>
 map [q :cprev<CR>
+map <C-n> :cnext<CR>
+map <C-m> :cprev<CR>
 
 nmap <leader>ev :vsplit $MYVIMRC<cr>
 ""}}}2
@@ -251,14 +254,6 @@ nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>gs :Gstatus<cr>
 "}}}
 
-"{{{ NerdTree
-:map <leader>v :NERDTreeToggle<CR>
-
-"Start NerdTree when no file specified
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-"}}}
-
 "{{{ Python
 "For python 
 "set fdm=indent
@@ -268,6 +263,22 @@ imap <C-v> from blackfire import probe; probe.initialize(); probe.enable()
 
 
 2mat ErrorMsg '\%119v.' "highlights 81st char
+"}}}
+
+"{{{ Vim-go
+autocmd FileType go nmap <localleader>b :<C-u>call <SID>build_go_files()<CR>
+autocmd FileType go nmap <localleader>r <Plug>(go-run)
+
+" run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#test#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+
 "}}}
 
 "{{{ Ag
