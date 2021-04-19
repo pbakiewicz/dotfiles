@@ -16,6 +16,8 @@ abbr ... "cd ../.."
 # sourcing autojump
 . /home/pawel/.autojump/share/autojump/autojump.fish
 
+fish_vi_key_bindings
+
 # Making cd always displayin dir content
 function cd
     if count $argv > /dev/null
