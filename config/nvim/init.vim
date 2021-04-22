@@ -9,6 +9,7 @@ Plug 'mhinz/vim-startify'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'justinmk/vim-sneak'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 "}}}
 
