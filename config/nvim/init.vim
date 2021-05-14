@@ -250,7 +250,7 @@ let g:startify_change_to_dir = 0
 
 "Fugitive staged differences
 command Greview :Git diff --staged
-nnoremap <leader>gr :Greview<cr>
+nnoremap <leader>gr :Greview<cr><C-w>T
 nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>gs :Gstatus<cr>
 "}}}
@@ -311,7 +311,8 @@ set diffopt+=vertical  "for splitting only vertically
 " For default start in buffers. Use ranger to look for files.
 let g:ctrlp_cmd = "CtrlPBuffer"
 " For searing in tags TODO: sync with tag file
-nnoremap <leader>t :CtrlPTag<CR>
+nnoremap tt :CtrlPTag<CR>
+nnoremap ff :CtrlPMRU<CR>
 "}}}
 
 "{{{ Quickscope
