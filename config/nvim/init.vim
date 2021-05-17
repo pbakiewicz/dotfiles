@@ -10,6 +10,7 @@ Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'voldikss/vim-floaterm'
 call plug#end()
 "}}}
 
@@ -76,8 +77,6 @@ map ]q :cnext<CR>
 map [q :cprev<CR>
 map <C-n> :cnext<CR>
 map <C-m> :cprev<CR>
-
-nmap <leader>ev :vsplit $MYVIMRC<cr>
 ""}}}2
 
 "For exporting to pdf on every *note* file save
@@ -330,6 +329,10 @@ let g:qs_max_chars=150
 "{{{ Sneak
 let sneak#label = 1
 "}}}
+
+" Floatterm
+let g:floaterm_keymap_new = '<Leader>ft'
+
 
 "{{{ functions
 function! ToggleQuickFix()
