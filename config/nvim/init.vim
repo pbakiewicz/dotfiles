@@ -332,6 +332,7 @@ let sneak#label = 1
 
 " Floatterm
 let g:floaterm_keymap_new = '<Leader>ft'
+let g:floaterm_autoclose = 1 " Closing when job exits normally
 
 
 "{{{ functions
