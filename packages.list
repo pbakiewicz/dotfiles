@@ -50,6 +50,8 @@ jre-openjdk
 keepassxc
 kitty
 libtool
+libva-mesa-driver
+libva-utils
 light
 linux
 linux-firmware
