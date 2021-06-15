@@ -4,6 +4,8 @@ set -gx PATH /home/pawel/.local/bin/ $PATH
 set -gx PATH /home/pawel/bin/ $PATH
 set -gx PATH /home/pawel/bin/ssh/ $PATH
 set -gx PATH /home/pawel/.npm-global/bin/ $PATH
+set -gx PATH /home/pawel/go/bin $PATH
+set -gx PATH /home/pawel/.luarocks/bin/ $PATH
 # {{{ abbrs
 abbr v nvim
 abbr n newsboat
