@@ -1,0 +1,4 @@
+alias e='nvim'
+alias vim="nvim"
+alias reload=". $ZDOTDIR/.zshrc"
+alias ls="ls --color"
