@@ -2,7 +2,7 @@
 set $mod Mod4
 font pango:monospace 8
 floating_modifier $mod 
-gaps inner 15
+gaps inner 20
 # Chowamy, chyba, ze dla floating windows
 # for_window [title="^(?!floating).*"] border pixel 0 
 for_window [class="^.*"] border pixel 0

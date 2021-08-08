@@ -1,3 +1,5 @@
 autoload/
 plugged/
 config-ln
+.zcompdump
+.zhistory
