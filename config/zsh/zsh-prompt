@@ -3,12 +3,20 @@ setopt prompt_subst # variable substiution in promtp
 # Find and set branch name var if in git repository.
 function git_branch_name()
 {
-  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
+  unstaged_files=$(git status --porcelain 2> /dev/null | wc -l)
+  if [[ ${unstaged_files} -eq 0 ]];
+  then
+      emoticon="🐝"
+  else
+      emoticon="⚙️ "
+  fi
+
+  branch=$(git branch 2> /dev/null | awk '{print $NF}')
   if [[ $branch == "" ]];
   then
     :
   else
-    echo " 🐝 %B${branch}%b"
+    echo " ${emoticon} %B${branch}%b"
   fi
 }
 
