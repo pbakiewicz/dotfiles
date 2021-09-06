@@ -45,7 +45,7 @@ set pyx=3 "for nvim python version
 
 set scrolloff=8 " starts scrolling after 8 line
 set nohlsearch " stop highlighting after enter
-set shell=/bin/bash " For getting terminal output right
+set shell=/bin/zsh " For getting terminal output right
 "}}}2
 
 "{{{2 Shortcuts
@@ -332,7 +332,7 @@ let sneak#label = 1
 
 " Floatterm
 let g:floaterm_keymap_new = '<Leader>ft'
-let g:floaterm_autoclose = 1 " Closing when job exits normally
+" let g:floaterm_autoclose = 1 " Closing when job exits normally
 
 
 "{{{ functions
