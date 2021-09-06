@@ -11,8 +11,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # }}}
 
 # {{{ shortcuts
-bindsym $mod+Return exec termite
-bindsym $mod+Shift+Return exec termite -t floating_terminal
+bindsym $mod+Return exec kitty
+bindsym $mod+Shift+Return exec kitty -t floating_terminal
 bindsym $mod+n kill
 bindsym $mod+d exec "rofi -combi-modi window,drun -show combi -modi emoji combi -show-icons"
 
@@ -98,8 +98,8 @@ exec_always --no-startup-id dunst
 
 # For floating terminal
 for_window [ title="floating_terminal" ] floating enable
-bindsym $mod+t exec termite -e /home/pawel/bin/notes/todotaker -t floating_terminal
-bindsym $mod+Shift+t exec zathura /home/pawel/o/notes/pdf/todos.pdf
+# bindsym $mod+t exec termite -e /home/pawel/bin/notes/todotaker -t floating_terminal
+# bindsym $mod+Shift+t exec zathura /home/pawel/o/notes/pdf/todos.pdf
 
 # 💡 After longer fight light actually did the trick not xbacklight
 bindsym XF86MonBrightnessUp exec sudo light -A 5 # increase screen brightness
