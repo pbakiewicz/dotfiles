@@ -12,13 +12,12 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # {{{ shortcuts
 bindsym $mod+Return exec kitty
-bindsym $mod+Shift+Return exec kitty -t floating_terminal
+bindsym $mod+Shift+Return exec termite -t floating_terminal
 bindsym $mod+n kill
 bindsym $mod+d exec "rofi -combi-modi window,drun -show combi -modi emoji combi -show-icons"
 
 bindsym $mod+Shift+d exec dmenu-config.sh
 bindsym $mod+g exec google-chrome-stable
-bindsym $mod+p exec polybar-msg cmd toggle
 # }}}
 
 # {{{ bindings
@@ -59,6 +58,7 @@ bindsym $mod+i workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+o workspace $ws2
 bindsym $mod+3 workspace $ws3
+bindsym $mod+p workspace $ws3
 bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
@@ -98,8 +98,6 @@ exec_always --no-startup-id dunst
 
 # For floating terminal
 for_window [ title="floating_terminal" ] floating enable
-# bindsym $mod+t exec termite -e /home/pawel/bin/notes/todotaker -t floating_terminal
-# bindsym $mod+Shift+t exec zathura /home/pawel/o/notes/pdf/todos.pdf
 
 # 💡 After longer fight light actually did the trick not xbacklight
 bindsym XF86MonBrightnessUp exec sudo light -A 5 # increase screen brightness
