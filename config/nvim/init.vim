@@ -63,8 +63,7 @@ nmap gn :tabnew<CR>
 nmap gk :tabnext<CR>
 nmap gj :tabprev<CR>
 " quick escaping
-imap jk <Esc>
-imap kj <Esc>
+imap jj <Esc>
 
 " resizing
 nmap <M-j> :resize -2<CR>
