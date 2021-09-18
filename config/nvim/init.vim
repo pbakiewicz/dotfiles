@@ -3,7 +3,6 @@ call plug#begin()
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'unblevable/quick-scope'
 Plug 'mhinz/vim-startify'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
@@ -299,17 +298,6 @@ nnoremap tt :CtrlPTag<CR>
 nnoremap ff :CtrlPMRU<CR>
 "}}}
 
-"{{{ Quickscope
-
-"conf for quickscope https://www.chrisatmachine.com/Neovim/14-quickscope/
-" Trigger a highlight in the appropriate direction when pressing these keys:
-let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-
-highlight QuickScopePrimary guifg='#00C7DF' gui=underline ctermfg=155 cterm=underline
-highlight QuickScopeSecondary guifg='#afff5f' gui=underline ctermfg=81 cterm=underline
-
-let g:qs_max_chars=150
-"}}}
 
 "{{{ Sneak
 let sneak#label = 1
