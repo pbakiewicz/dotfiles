@@ -79,10 +79,6 @@ map <C-n> :cnext<CR>
 map <C-m> :cprev<CR>
 ""}}}2
 
-"For exporting to pdf on every *note* file save
-autocmd BufWritePost note-*.md silent !buildNote %:p
-autocmd BufWritePost todos.md silent !buildTODO
-
 
 :autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
 "}}}
