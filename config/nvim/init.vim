@@ -2,7 +2,6 @@
 call plug#begin()
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'vim-airline/vim-airline'
-Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'unblevable/quick-scope'
 Plug 'mhinz/vim-startify'
@@ -238,16 +237,6 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>s
 "{{{ Startify
 "to be able to use AG
 let g:startify_change_to_dir = 0
-"}}}
-
-"{{{ Fugitive
-:map <leader>b :Gblame<CR>
-
-"Fugitive staged differences
-command Greview :Git diff --staged
-nnoremap <leader>gr :Greview<cr><C-w>T
-nnoremap <leader>gc :Gcommit<cr>
-nnoremap <leader>gs :Gstatus<cr>
 "}}}
 
 "{{{ Python
