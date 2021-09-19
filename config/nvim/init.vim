@@ -12,7 +12,6 @@ Plug 'voldikss/vim-floaterm'
 call plug#end()
 "}}}
 
-"{{{ Main settings
 let mapleader = ","
 let maplocalleader = ","
 syntax on
@@ -48,14 +47,14 @@ nnoremap <leader><leader> :w<CR>
 :map <C-j> <C-w>j
 :map <C-k> <C-w>k
 :map <C-l> <C-w>l
-"Buffers
+
+" NAVIGATION
 nmap <TAB> :bnext<CR>
 nmap <S-TAB> :bprevious<CR>
-" Shortcuts for tabs
 nmap gn :tabnew<CR>
 nmap gk :tabnext<CR>
 nmap gj :tabprev<CR>
-" quick escaping
+
 imap jj <Esc>
 
 nmap <leader>g :FloatermNew --height=0.9 --width=0.9 --autoclose=1 lazygit<CR>
@@ -73,7 +72,6 @@ map <C-m> :cprev<CR>
 
 
 :autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
-"}}}
 
 "{{{ Coc settings
 " TextEdit might fail if hidden is not set.
