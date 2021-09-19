@@ -22,27 +22,16 @@ set splitbelow splitright " normal splitting
 set mouse=a
 set number relativenumber " number only to shor current number instead of 0.
 set backspace=indent,eol,start " backspace deletes everyhing
-set nobackup " recommended by coc
-set nowritebackup " recommended by coc
 set noshowmode " no ---INSERT -- anymore
 set showtabline=2 "always show tabs names, even with one tab
 set tabstop=8 softtabstop=4 shiftwidth=4 noexpandtab
-"hi Normal guibg=NONE ctermbg=NONE " transparent backgorund
-"Better colors
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set background=dark
-set t_Co=256
-" set termguicolors
 set foldmethod=marker " Folding with {{{ - }}}
-set pyx=3 "for nvim python version
 
 set scrolloff=8 " starts scrolling after 8 line
 set nohlsearch " stop highlighting after enter
-set shell=/bin/zsh " For getting terminal output right
 
 nnoremap <leader><leader> :w<CR>
-
 :map <C-h> <C-w>h
 :map <C-j> <C-w>j
 :map <C-k> <C-w>k
@@ -72,6 +61,19 @@ map <C-m> :cprev<CR>
 
 
 :autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
+
+" Not fun
+set nobackup " recommended by coc
+set nowritebackup " recommended by coc
+"hi Normal guibg=NONE ctermbg=NONE " transparent backgorund
+"Better colors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+set t_Co=256
+" set termguicolors
+set pyx=3 "for nvim python version
+" set shell=/bin/zsh " Probably was only needed when I used fish.
+
 
 "{{{ Coc settings
 " TextEdit might fail if hidden is not set.
