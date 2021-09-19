@@ -46,7 +46,7 @@ nmap gj :tabprev<CR>
 
 imap jj <Esc>
 
-nmap <leader>g :FloatermNew --height=0.9 --width=0.9 --autoclose=1 lazygit<CR>
+nmap <leader>g :FloatermNew --height=1.0 --width=1.0 --autoclose=1 lazygit<CR>
 " resizing
 nmap <M-j> :resize -2<CR>
 nmap <M-k> :resize +2<CR>
