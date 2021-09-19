@@ -18,7 +18,6 @@ let maplocalleader = ","
 syntax on
 colorscheme darkblue
 
-"{{{2 Variables
 set clipboard=unnamedplus " copying to default clipboard
 set splitbelow splitright " normal splitting
 set mouse=a
@@ -42,9 +41,7 @@ set pyx=3 "for nvim python version
 set scrolloff=8 " starts scrolling after 8 line
 set nohlsearch " stop highlighting after enter
 set shell=/bin/zsh " For getting terminal output right
-"}}}2
 
-"{{{2 Shortcuts
 nnoremap <leader><leader> :w<CR>
 
 :map <C-h> <C-w>h
@@ -73,7 +70,6 @@ map ]q :cnext<CR>
 map [q :cprev<CR>
 map <C-n> :cnext<CR>
 map <C-m> :cprev<CR>
-""}}}2
 
 
 :autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
