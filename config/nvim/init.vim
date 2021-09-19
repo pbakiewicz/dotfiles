@@ -15,16 +15,14 @@ call plug#end()
 "{{{ Main settings
 let mapleader = ","
 let maplocalleader = ","
-syntax on " highlight stuff
+syntax on
 colorscheme darkblue
 
 "{{{2 Variables
-"set nowrap "wrapping is bad - PS but not really for small floating windows
-" set cursorline " highlight line with cursor
 set clipboard=unnamedplus " copying to default clipboard
 set splitbelow splitright " normal splitting
-set mouse=a " use mouse
-set number relativenumber " numbers
+set mouse=a
+set number relativenumber " number only to shor current number instead of 0.
 set backspace=indent,eol,start " backspace deletes everyhing
 set nobackup " recommended by coc
 set nowritebackup " recommended by coc
