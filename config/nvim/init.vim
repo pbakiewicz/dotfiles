@@ -44,7 +44,7 @@ nmap gn :tabnew<CR>
 nmap gk :tabnext<CR>
 nmap gj :tabprev<CR>
 
-imap jj <Esc>
+imap jk <Esc>
 
 nmap <leader>g :FloatermNew --height=1.0 --width=1.0 --autoclose=1 lazygit<CR>
 " resizing
