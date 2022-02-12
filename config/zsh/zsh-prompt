@@ -11,7 +11,7 @@ function git_branch_name()
       emoticon="⚙️ "
   fi
 
-  branch=$(git branch 2> /dev/null | awk '{print $NF}')
+  branch=$(git branch 2> /dev/null | grep '\*' | awk '{print $NF}' | head -n1)
   if [[ $branch == "" ]];
   then
     :
