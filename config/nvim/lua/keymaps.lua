@@ -36,4 +36,5 @@ k("v", "<A-k>", ":m '<-2<CR>gv", opts)
 -- Pasting puts new value into void registry
 k("v", "p", '"_dP', opts)
 
--- nmap <leader>g :FloatermNew --height=1.0 --width=1.0 --autoclose=1 lazygit<CR>
+-- lazygit baby
+k("n", "<leader>g", ":FloatermNew --height=1.0 --width=1.0 --autoclose=1 lazygit<CR>", opts)
