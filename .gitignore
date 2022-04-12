@@ -3,3 +3,4 @@ plugged/
 config-ln
 .zcompdump
 .zhistory
+packer_compiled.lua
