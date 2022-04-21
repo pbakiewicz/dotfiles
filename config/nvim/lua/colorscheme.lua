@@ -1,5 +1,3 @@
-vim.cmd "colorscheme darkplus"
-
 -- Zabezpieczamy się przed tym gdy nie ma pluginu dającego darkplusa
 
 local colorscheme = "darkplus"
