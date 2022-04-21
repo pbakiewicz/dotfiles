@@ -7,4 +7,5 @@ return packer.startup(function(use)
     use 'voldikss/vim-floaterm'
     -- bclose closes ranger term from buffers
     use {'rbgrouleff/bclose.vim', lock = true}
+    use "lunarvim/colorschemes"
 end)
