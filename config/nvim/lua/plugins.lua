@@ -7,7 +7,8 @@ return packer.startup(function(use)
     use 'voldikss/vim-floaterm'
     use 'justinmk/vim-sneak'
     use {'rbgrouleff/bclose.vim', lock = true} -- bclose closes ranger term from buffers
-    use 'lunarvim/colorschemes' -- more colors scheme like tokyonight
+    use 'lunarvim/colorschemes'
+    use 'folke/tokyonight.nvim'
 
     use "hrsh7th/nvim-cmp" -- core of completion
     use "hrsh7th/cmp-buffer" -- buffer source
