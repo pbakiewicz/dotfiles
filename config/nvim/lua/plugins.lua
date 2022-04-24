@@ -9,10 +9,15 @@ return packer.startup(function(use)
     use {'rbgrouleff/bclose.vim', lock = true} -- bclose closes ranger term from buffers
     use 'lunarvim/colorschemes' -- more colors scheme like tokyonight
 
-    -- completion plugins
-    use "hrsh7th/nvim-cmp"
-    use "hrsh7th/cmp-buffer"
-    use "hrsh7th/cmp-path"
-    use "hrsh7th/cmp-cmdline"
-    use "saadparwaiz1/cmp_luasnip"
+    use "hrsh7th/nvim-cmp" -- core of completion
+    use "hrsh7th/cmp-buffer" -- buffer source
+    use "hrsh7th/cmp-path" -- path source
+    use "hrsh7th/cmp-nvim-lua"
+    -- for LSP!! use "hrsh7th/cmp-nvim-lsp"
+
+    -- snippets
+    -- use "saadparwaiz1/cmp_luasnip"
+    -- use "L3MON4D3/LuaSnip"
+    -- use "rafamadriz/friendly-snippets"
+
 end)
