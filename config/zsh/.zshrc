@@ -1,11 +1,10 @@
+# PATH
+export PATH="$PATH:$HOME/go/bin/"
+
 ### COMPLETIONS
 autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select # select on next TAB
 _comp_options+=(globdots) # show hidden
-
-### OPTIONS
-setopt correctall
-setopt autocd
 
 ### PYWAL COLORS
 cat ~/.cache/wal/sequences
