@@ -11,11 +11,12 @@ return packer.startup(function(use)
     use 'lunarvim/colorschemes'
     use 'folke/tokyonight.nvim'
 
-    use "hrsh7th/nvim-cmp" -- core of completion
-    use "hrsh7th/cmp-buffer" -- buffer source
-    use "hrsh7th/cmp-path" -- path source
-    use "hrsh7th/cmp-nvim-lua"
-    -- use "hrsh7th/cmp-nvim-lsp"
+    -- completions
+    use "hrsh7th/nvim-cmp" -- core
+    use "hrsh7th/cmp-nvim-lsp" -- LSP baby
+    use "hrsh7th/cmp-buffer" -- buffer
+    use "hrsh7th/cmp-path" -- path
+    use "hrsh7th/cmp-nvim-lua" -- neovim Lua API
 
     -- snippets
     -- https://youtu.be/_DnmphIwnjo?t=785
