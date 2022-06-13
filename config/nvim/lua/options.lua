@@ -20,6 +20,6 @@ for k, v in pairs(options) do
     vim.opt[k] = v
 end
 
-vim.cmd "set softtabstop=4 shiftwidth=4 noexpandtab"    
+vim.g['sneak#label'] = 1
 
-
+vim.cmd "set softtabstop=4 shiftwidth=4 noexpandtab"
