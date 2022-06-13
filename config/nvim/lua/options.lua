@@ -1,3 +1,6 @@
+vim.g.mapleader = ','
+vim.g.maplocalleader = ','
+
 local options = {
     clipboard = "unnamedplus",
     splitbelow = true,
