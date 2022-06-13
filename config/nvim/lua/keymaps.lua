@@ -8,6 +8,20 @@ k("n", "<leader><leader>", ":w<CR>", opts)
 k("n", "<leader>.", ":wq<CR>", opts)
 k("n", "..", ":q!<CR>", opts)
 
+--telescope
+k("n", "ff", ":Telescope git_files<CR>", opts)
+k("n", "fg", ":Telescope live_grep<CR>", opts)
+k("n", "fb", ":Telescope buffers<CR>", opts)
+k("n", "<leader>f", ":Telescope file_browser<CR>", opts)
+k("n", "\\", ":Telescope lsp_document_symbols<CR>", opts)
+k("n", "<leader>\\", ":Telescope lsp_workspace_symbols query=", opts)
+
+
+
+--quickfix list, mostly for putting data with <C-q> from telescope
+k("n", "<C-j>", ":cnext<CR>", opts)
+k("n", "<C-k>", ":cprev<CR>", opts)
+
 -- sane navigation
 k("n", "<C-h>", "<C-w>h", opts)
 k("n", "<C-j>", "<C-w>j", opts)
