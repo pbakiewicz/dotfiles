@@ -23,6 +23,8 @@ return packer.startup(function(use)
     use "hrsh7th/cmp-path" -- path
     use "hrsh7th/cmp-nvim-lua" -- neovim Lua API
 
+    use "f-person/git-blame.nvim" -- for blaming
+
     -- snippets
     -- https://youtu.be/_DnmphIwnjo?t=785
     -- use "saadparwaiz1/cmp_luasnip"

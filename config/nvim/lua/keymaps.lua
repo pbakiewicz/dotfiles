@@ -1,4 +1,3 @@
-
 local k = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
@@ -50,3 +49,7 @@ k("v", "p", '"_dP', opts)
 
 -- lazygit baby
 k("n", "<leader>g", ":FloatermNew --height=1.0 --width=1.0 --autoclose=1 lazygit<CR>", opts)
+
+-- blame
+k("n", "<leader>b", ":GitBlameToggle<cr>", opts)
+k("n", "<leader>bo", ":GitBlameOpenCommitURL<cr>", opts)

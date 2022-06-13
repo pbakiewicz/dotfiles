@@ -26,3 +26,8 @@ end
 vim.g['sneak#label'] = 1
 
 vim.cmd "set softtabstop=4 shiftwidth=4 noexpandtab"
+
+-- options for git blame
+vim.g.gitblame_enabled = 0
+vim.g.gitblame_date_format = "%r"
+vim.g.gitblame_message_template = "<summary> * <date> * <author>"
