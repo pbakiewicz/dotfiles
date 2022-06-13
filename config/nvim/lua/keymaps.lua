@@ -2,16 +2,18 @@ local k = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
 k("n", "<leader><leader>", ":w<CR>", opts)
+k("i", "<leader><leader>", ":w<CR>", opts)
 k("n", "<leader>.", ":wq<CR>", opts)
 k("n", "..", ":q!<CR>", opts)
 
 --telescope
 k("n", "ff", ":Telescope git_files<CR>", opts)
-k("n", "fg", ":Telescope live_grep<CR>", opts)
-k("n", "fb", ":Telescope buffers<CR>", opts)
-k("n", "<leader>f", ":Telescope file_browser<CR>", opts)
+k("n", "fg", "<cmd>lua require('telescope-config').live_grep()<cr>", opts)
+k("n", "fb", ":Telescope buffers<cr>", opts)
+k("n", "<leader>f", "<cmd>lua require('telescope-config').file_browser()<cr>", opts)
 k("n", "\\", ":Telescope lsp_document_symbols<CR>", opts)
 k("n", "<leader>\\", ":Telescope lsp_workspace_symbols query=", opts)
+k("n", "<leader>/", "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find({sorting_strategy=ascending,})<cr>", opts)
 
 
 
@@ -53,3 +55,7 @@ k("n", "<leader>g", ":FloatermNew --height=1.0 --width=1.0 --autoclose=1 lazygit
 -- blame
 k("n", "<leader>b", ":GitBlameToggle<cr>", opts)
 k("n", "<leader>bo", ":GitBlameOpenCommitURL<cr>", opts)
+
+-- vim test
+k("n", "t<C-n>", "<cmd>TestNearest<cr>", opts)
+k("n", "t<C-f>", "<cmd>TestFile<cr>", opts)
