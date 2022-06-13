@@ -59,3 +59,8 @@ k("n", "<leader>bo", ":GitBlameOpenCommitURL<cr>", opts)
 -- vim test
 k("n", "t<C-n>", "<cmd>TestNearest<cr>", opts)
 k("n", "t<C-f>", "<cmd>TestFile<cr>", opts)
+
+
+-- for python only
+vim.api.nvim_exec(':autocmd FileType python :nmap <leader>c I#<esc>', false)
+vim.api.nvim_exec(':autocmd FileType python :abbrev pudb import pudb; pu.db', false)
