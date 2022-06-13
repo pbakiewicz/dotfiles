@@ -6,7 +6,7 @@ local opts = { noremap = true, silent = true }
 
 k("n", "<leader><leader>", ":w<CR>", opts)
 k("n", "<leader>.", ":wq<CR>", opts)
-k("n", "..", ":q!", opts)
+k("n", "..", ":q!<CR>", opts)
 
 -- sane navigation
 k("n", "<C-h>", "<C-w>h", opts)
