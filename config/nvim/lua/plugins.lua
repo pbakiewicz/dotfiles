@@ -25,6 +25,8 @@ return packer.startup(function(use)
 
     use "f-person/git-blame.nvim" -- for blaming
 
+    use "vim-test/vim-test" -- for unittests
+
     -- snippets
     -- https://youtu.be/_DnmphIwnjo?t=785
     -- use "saadparwaiz1/cmp_luasnip"
