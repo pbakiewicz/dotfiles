@@ -4,12 +4,17 @@ return packer.startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'neovim/nvim-lspconfig' -- pretty much required for LSP to function
     use 'mhinz/vim-startify'
-    use 'francoiscabrol/ranger.vim'
     use 'voldikss/vim-floaterm'
     use 'justinmk/vim-sneak'
-    use {'rbgrouleff/bclose.vim', lock = true} -- bclose closes ranger term from buffers
     use 'lunarvim/colorschemes'
     use 'folke/tokyonight.nvim'
+
+    -- telescope
+    use "nvim-lua/plenary.nvim"
+    use "nvim-telescope/telescope.nvim"
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+    use { "nvim-telescope/telescope-file-browser.nvim" }
+
 
     -- completions
     use "hrsh7th/nvim-cmp" -- core
