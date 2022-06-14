@@ -27,6 +27,7 @@ return packer.startup(function(use)
     -- snippets
     -- https://youtu.be/_DnmphIwnjo?t=785
     use "L3MON4D3/LuaSnip"
+    use "onsails/lspkind.nvim"
     -- use "rafamadriz/friendly-snippets"
     -- unit tests
     use "vim-test/vim-test"
