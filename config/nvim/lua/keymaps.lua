@@ -24,7 +24,9 @@ k("n", "<C-l>", "<C-w>l", opts)
 
 --quickfix list, mostly for putting data with <C-q> from telescope
 k("n", "]q", ":cnext<CR>", opts)
+k("n", "]Q", ":clast<CR>", opts)
 k("n", "[q", ":cprev<CR>", opts)
+k("n", "[Q", ":cfirst<CR>", opts)
 k("n", "<leader>q", ":cclose<CR>", opts)
 
 -- buffers
