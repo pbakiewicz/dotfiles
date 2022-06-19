@@ -16,16 +16,17 @@ k("n", "<leader>\\", ":Telescope lsp_workspace_symbols query=", opts)
 k("n", "<leader>/", "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find({sorting_strategy=ascending,})<cr>", opts)
 
 
-
---quickfix list, mostly for putting data with <C-q> from telescope
-k("n", "<C-j>", ":cnext<CR>", opts)
-k("n", "<C-k>", ":cprev<CR>", opts)
-
 -- sane navigation
 k("n", "<C-h>", "<C-w>h", opts)
 k("n", "<C-j>", "<C-w>j", opts)
 k("n", "<C-k>", "<C-w>k", opts)
 k("n", "<C-l>", "<C-w>l", opts)
+
+--quickfix list, mostly for putting data with <C-q> from telescope
+k("n", "]q", ":cnext<CR>", opts)
+k("n", "[q", ":cprev<CR>", opts)
+k("n", "<leader>q", ":cclose<CR>", opts)
+
 -- buffers
 k("n", "<TAB>", ":bnext<CR>", opts)
 k("n", "<S-TAB>", ":bprevious<CR>", opts)
