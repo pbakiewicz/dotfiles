@@ -12,7 +12,8 @@ k("n", "fg", "<cmd>lua require('telescope-config').live_grep()<cr>", opts)
 k("n", "fb", ":Telescope buffers<cr>", opts)
 k("n", "<leader>f", "<cmd>lua require('telescope-config').file_browser()<cr>", opts)
 k("n", "\\", ":Telescope lsp_document_symbols<CR>", opts)
-k("n", "<leader>\\", ":Telescope lsp_workspace_symbols query=", opts)
+-- k("n", "fs", "<cmd>lua require('telescope.builtin').lsp_workspace_symbols({ignore_symbols='variable', query=vim.fn.input('Symbol: ')})<CR>", opts)
+k("n", "fs", "<cmd>lua require('telescope.builtin').lsp_dynamic_workspace_symbols({ignore_symbols='variable'})<CR>", opts)
 k("n", "<leader>/", "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find({sorting_strategy=ascending,})<cr>", opts)
 
 
