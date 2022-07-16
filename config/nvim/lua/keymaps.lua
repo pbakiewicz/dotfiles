@@ -63,6 +63,18 @@ k("n", "<leader>bo", ":GitBlameOpenCommitURL<cr>", opts)
 k("n", "t<C-n>", "<cmd>TestNearest<cr>", opts)
 k("n", "t<C-f>", "<cmd>TestFile<cr>", opts)
 
+-- debugger
+k("n", "<F1>", "<Cmd>lua require'dap'.toggle_breakpoint()<CR>", opts)
+k("n", "<F2>", "<Cmd>lua require'dap'.step_over()<CR>", opts)
+k("n", "<F3>", "<Cmd>lua require'dap'.step_into()<CR>", opts)
+k("n", "<F4>", "<Cmd>lua require'dap'.continue()<CR>", opts)
+k("n", "<F6>", "<Cmd>lua require'dap'.step_out()<CR>", opts)
+k("n", "<F7>", "<Cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", opts)
+k("n", "<F10>", "<Cmd>lua require'dap'.repl.open()<CR>", opts)
+k("n", "<Leader>lp", "<Cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", opts)
+k("n", "<Leader>dl", "<Cmd>lua require'dap'.run_last()<CR>", opts)
+
+
 
 -- for python only
 vim.api.nvim_exec(':autocmd FileType python :nmap <leader>c I#<esc>', false)

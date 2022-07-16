@@ -24,6 +24,13 @@ return packer.startup(function(use)
     use "hrsh7th/cmp-path" -- path
     use "hrsh7th/cmp-nvim-lua" -- neovim Lua API
     use "saadparwaiz1/cmp_luasnip" -- snippets completion for LuaSnip specifically
+    -- treesitter
+    use "nvim-treesitter/nvim-treesitter"
+    -- debugging
+    use 'mfussenegger/nvim-dap'
+    use 'leoluz/nvim-dap-go'
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    use 'theHamsta/nvim-dap-virtual-text'
     -- snippets
     -- https://youtu.be/_DnmphIwnjo?t=785
     use "L3MON4D3/LuaSnip"
