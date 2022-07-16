@@ -28,9 +28,10 @@ return packer.startup(function(use)
     use "nvim-treesitter/nvim-treesitter"
     -- debugging
     use 'mfussenegger/nvim-dap'
-    use 'leoluz/nvim-dap-go'
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
     use 'theHamsta/nvim-dap-virtual-text'
+    use 'leoluz/nvim-dap-go'
+    use 'mfussenegger/nvim-dap-python'
     -- snippets
     -- https://youtu.be/_DnmphIwnjo?t=785
     use "L3MON4D3/LuaSnip"
