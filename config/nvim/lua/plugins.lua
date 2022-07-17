@@ -16,10 +16,13 @@ return packer.startup(function(use)
     use "nvim-telescope/telescope.nvim"
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
     use { "nvim-telescope/telescope-file-browser.nvim" }
+    -- comments
+    use "tpope/vim-commentary"
     -- completions core plugin
     use "hrsh7th/nvim-cmp"
     -- completions sources
     use "hrsh7th/cmp-nvim-lsp" -- LSP baby
+    use "onsails/lspkind.nvim" -- Make LSP more beautiful
     use "hrsh7th/cmp-buffer" -- buffer
     use "hrsh7th/cmp-path" -- path
     use "hrsh7th/cmp-nvim-lua" -- neovim Lua API
@@ -33,10 +36,8 @@ return packer.startup(function(use)
     use 'leoluz/nvim-dap-go'
     use 'mfussenegger/nvim-dap-python'
     -- snippets
-    -- https://youtu.be/_DnmphIwnjo?t=785
     use "L3MON4D3/LuaSnip"
-    use "onsails/lspkind.nvim"
-    -- use "rafamadriz/friendly-snippets"
+    use "rafamadriz/friendly-snippets"
     -- unit tests
     use "vim-test/vim-test"
 

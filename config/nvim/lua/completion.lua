@@ -1,4 +1,8 @@
 local cmp = require "cmp"
+local luasnip = require "luasnip"
+
+require("luasnip.loaders.from_vscode").lazy_load()
+
 
 -- More info :h ins-completion
 
@@ -11,11 +15,23 @@ cmp.setup {
       ["<CR>"] = cmp.mapping.confirm({
 	  behavior = cmp.ConfirmBehavior.Insert, -- find what it does
 	  select = true,
-      })
+      }),
+      ["<Tab>"] = cmp.mapping(function (fallback)
+	 if cmp.visible() then
+	  	cmp.select_next_item()
+	 elseif luasnip.expandable() then
+	     luasnip.expand()
+	 elseif luasnip.expand_or_jumpable() then
+	    luasnip.expand_or_jump()
+ 	 else
+	    fallback()
+         end
+      end),
     },
     sources = {
 	-- order in priority
 	{ name = "nvim_lsp"},
+	{ name = "luasnip"},
 	{ name = "nvim_lua"},
 	{ name = "path"},
 	{ name = "buffer", keyword_length=5 },
