@@ -84,5 +84,6 @@ k("n", "<Leader>dl", "<Cmd>lua require'dap'.run_last()<CR>", opts)
 
 
 -- for python only
+k("n", "<space>", "zc", opts)
 vim.api.nvim_exec(':autocmd FileType python :nmap <leader>c I#<esc>', false)
 vim.api.nvim_exec(':autocmd FileType python :abbrev pudb import pudb; pu.db', false)
