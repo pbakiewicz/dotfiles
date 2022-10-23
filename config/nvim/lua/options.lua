@@ -34,6 +34,12 @@ vim.g.gitblame_date_format = "%r"
 vim.g.gitblame_message_template = "<summary> * <date> * <author>"
 
 -- vim test
+-- btw, co to za konstrukcja w lua z tym hashem?
 vim.g["test#python#runner"] = "djangotest"
 vim.g["test#python#djangotest#options"] = "--keepdb"
 vim.g["test#strategy"] = "neovim"
+
+
+-- aby floatterm sie nie insertował, i mógłbym zrobić flow, aby tam było
+-- odpalene Django, i tylko podglądam jak chce widzieć logi
+vim.g.floaterm_autoinsert = 0
