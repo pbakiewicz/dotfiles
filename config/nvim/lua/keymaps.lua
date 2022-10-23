@@ -55,7 +55,9 @@ k("v", "<A-k>", ":m '<-2<CR>gv", opts)
 -- Pasting puts new value into void registry
 k("v", "p", '"_dP', opts)
 
--- lazygit baby
+-- Floaterm
+k("n", "<C-\\>", ":FloatermToggle<CR>", opts)
+-- Lazygit, zawsze warto sobie odświeżać co tam nowego.
 k("n", "<leader>g", ":FloatermNew --height=1.0 --width=1.0 --autoclose=1 lazygit<CR>", opts)
 
 -- blame

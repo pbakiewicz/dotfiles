@@ -5,9 +5,11 @@ return packer.startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'neovim/nvim-lspconfig' -- LSP even tho builtin requires this package.
     use 'mhinz/vim-startify'
+    -- totalnie o tym zapomniałęm.
     use 'voldikss/vim-floaterm'
     use 'justinmk/vim-sneak'
-    use "f-person/git-blame.nvim" -- for blaming
+    -- Tutaj było by spoko gdybym mógł jeszcze wejść w historie tego commita
+    use "f-person/git-blame.nvim"
     -- colorschemes
     use 'lunarvim/colorschemes'
     use 'folke/tokyonight.nvim'
