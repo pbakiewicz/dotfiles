@@ -11,13 +11,17 @@ function git_branch_name()
       emoticon="⚙️ "
   fi
 
-  branch=$(git branch 2> /dev/null | grep '\*' | awk '{print $NF}' | head -n1)
-  if [[ $branch == "" ]];
-  then
-    :
+  # Tutaj przykład mojego przekombinowania. Trzeba było najpierw po prostu sprawdzić,
+  # czy jesteśmy w repo, a dopiero później brać git.
+  # branch=$(git branch 2> /dev/null | grep '\*' | awk '{print $NF}' | head -n1)
+  if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
+      branch=$(git rev-parse --abbrev-ref HEAD)
+    echo " ${emoticon} %B${branch}%b:"
   else
-    echo " ${emoticon} %B${branch}%b"
+      :
   fi
 }
 
+# Ciekawe, że wartosć PROMPTa jest zwracana tylko raz, ale funkcjoa git_branch_name
+# jest ewaulowana przy każdym cd.
 PROMPT='%F{208}%~%f$(git_branch_name) ' 
