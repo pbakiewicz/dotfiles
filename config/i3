@@ -11,7 +11,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # }}}
 
 # {{{ shortcuts
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+Return exec termite -t floating_terminal
 bindsym $mod+n kill
 bindsym $mod+d exec "rofi -combi-modi window,drun,emoji -show combi -modi emoji combi -show-icons"
