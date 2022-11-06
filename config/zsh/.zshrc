@@ -17,6 +17,6 @@ source $HOME/.autojump/share/autojump/autojump.zsh # autojump
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #### START IN TMUX
-if [ -n "${DISPLAY}" ]; then
-  [ -z "${TMUX}" ] && { tmux -u } >/dev/null 2>&1 # stop printing commands 
-fi
+# if [ -n "${DISPLAY}" ]; then
+#  [ -z "${TMUX}" ] && { tmux -u } >/dev/null 2>&1 # stop printing commands 
+# fi
