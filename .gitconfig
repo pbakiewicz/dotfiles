@@ -1,0 +1,13 @@
+[alias]
+    b = branch
+    cp = cherry-pick
+    l = log --graph --oneline --decorate
+    s = status
+    ignore = nvim .git/info/exclude
+    p = pull
+    c = checkout
+[user]
+    email = pbakiewicz@icloud.com
+    name = Pawel Bakiewicz
+[core]
+    editor = nvim
