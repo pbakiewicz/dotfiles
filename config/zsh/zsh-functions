@@ -3,9 +3,9 @@
 function cd()
 {
     if [ "$#" -eq 0 ]; then
-	builtin cd; ls -a --color
+	builtin cd; ls --color
     else 
-	builtin cd "$1"; ls -a --color
+	builtin cd "$1"; ls --color
     fi
 }
 
