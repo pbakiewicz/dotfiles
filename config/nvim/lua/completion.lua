@@ -12,7 +12,7 @@ cmp.setup {
       ["<C-j>"] = cmp.mapping.select_next_item(),
       ["<C-Space>"] = cmp.mapping.complete(),
       ["<C-e>"] = cmp.mapping.abort(),
-      ["<CR>"] = cmp.mapping.confirm({
+      ["<c-y>"] = cmp.mapping.confirm({
 	  behavior = cmp.ConfirmBehavior.Insert, -- find what it does
 	  select = true,
       }),
@@ -31,6 +31,8 @@ cmp.setup {
 	end,
     },
     formatting = {
+	fields = { "abbr", "menu"},
+	-- fields = { "kind", "abbr", "menu"},
 	format = require("lspkind").cmp_format {
 	    with_text = true,
 	    menu = {
@@ -39,11 +41,10 @@ cmp.setup {
 		nvim_lua = "[api]",
 		path = "[path]",
 		luasnip = "[snip]",
-	    }
+	    },
 	}
     },
     experimental = {
-	ghost_text = true,
 	native_menu = false,
     }
 }
