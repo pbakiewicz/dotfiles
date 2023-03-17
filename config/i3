@@ -17,7 +17,7 @@ bindsym $mod+n kill
 bindsym $mod+d exec "rofi -combi-modi window,drun,emoji -show combi -modi emoji combi -show-icons"
 
 bindsym $mod+Shift+d exec dmenu-config.sh
-bindsym $mod+g exec google-chrome-stable
+bindsym $mod+g exec brave
 # }}}
 
 # {{{ bindings
