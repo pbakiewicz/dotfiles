@@ -57,7 +57,7 @@ k("v", "p", '"_dP', opts)
 
 -- Floaterm
 k("n", "<C-\\>", ":FloatermToggle<CR>", opts)
-k("n", "<C-t>", ":FloatermNew --wintype=split --height=0.2 --title=django htop<CR>", opts)
+k("n", "<C-t>", ":FloatermNew --wintype=split --height=0.2 --title=django <CR>", opts)
 -- Lazygit, zawsze warto sobie odświeżać co tam nowego.
 k("n", "<leader>g", ":FloatermNew --height=1.0 --width=1.0 --autoclose=1 lazygit<CR>", opts)
 
