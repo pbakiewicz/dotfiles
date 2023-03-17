@@ -5,6 +5,7 @@ return packer.startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'neovim/nvim-lspconfig' -- LSP even tho builtin requires this package.
     use 'mhinz/vim-startify'
+    use 'github/copilot.vim'
     -- totalnie o tym zapomniałęm.
     use 'voldikss/vim-floaterm'
     use 'justinmk/vim-sneak'
