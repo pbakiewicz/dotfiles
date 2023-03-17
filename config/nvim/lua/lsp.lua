@@ -1,7 +1,7 @@
 local nvim_lsp = require('lspconfig')
 
 -- define server as in :h lspconfig-server-configurations
-local servers = { 'gopls', 'sumneko_lua' , 'pyright'}
+local servers = { 'gopls', 'lua_ls' , 'pyright', 'clangd'}
 
 
 -- defining shared on_attach function
@@ -40,7 +40,7 @@ for _, server in ipairs(servers) do
 end
 
 -- custom for lua
-nvim_lsp.sumneko_lua.setup{
+nvim_lsp.lua_ls.setup{
     settings = {
 	Lua = {
 	    diagnostics = {
