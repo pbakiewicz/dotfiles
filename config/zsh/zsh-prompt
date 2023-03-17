@@ -23,9 +23,9 @@ function git_branch_name()
   unstaged_files=$(git status --porcelain 2> /dev/null | wc -l)
   if [[ ${unstaged_files} -eq 0 ]];
   then
-      emoticon="👻"
-  else
       emoticon="🤓"
+  else
+      emoticon="👻"
   fi
 
   # Tutaj przykład mojego przekombinowania. Trzeba było najpierw po prostu sprawdzić,
