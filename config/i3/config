@@ -22,10 +22,9 @@ bindsym $mod+Shift+Return exec alacritty -t floating_terminal
 bindsym $mod+n kill
 bindsym $mod+Shift+r restart
 
-# 🔥 Using puleaudio-ctl not pctl I can set maximum valume and not make my speakers explode 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down -5% #decrease sound volume
-
+# 🔥 sound, thing with sink number 0
+bindsym XF86AudioRaiseVolume exec --no-startup-id /home/pawel/bin/volume.sh up
+bindsym XF86AudioLowerVolume exec --no-startup-id /home/pawel/bin/volume.sh down
 ##########
 ## WINDOWS
 ##########
