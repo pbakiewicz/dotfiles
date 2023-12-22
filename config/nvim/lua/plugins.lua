@@ -43,5 +43,7 @@ return packer.startup(function(use)
     use "rafamadriz/friendly-snippets"
     -- unit tests
     use "vim-test/vim-test"
+    -- kolorowanie hashy
+    use "norcalli/nvim-colorizer.lua"
 
 end)
