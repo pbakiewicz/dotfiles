@@ -17,6 +17,8 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 # Floating terminal - quicky
 for_window [ title="floating_terminal" ] floating enable
 bindsym $mod+Shift+Return exec alacritty -t floating_terminal
+for_window [ title="floating_btop" ] floating enable resize set 1400 900
+bindsym $mod+b exec alacritty -t floating_btop -e btop
 
 # Unrelated shortcuts
 bindsym $mod+n kill
@@ -54,8 +56,9 @@ bindsym $mod+Ctrl+l resize grow width 10 px or 10 ppt
 # Resizing with mouse with $mod + left click 🖱️
 tiling_drag modifier titlebar
 # Deciding for next window position
-bindsym $mod+b split h
-bindsym $mod+v split v
+# I don't use it anyway.
+# bindsym $mod+b split h
+#bindsym $mod+v split v
 
 #############
 ## WORKSPACES
