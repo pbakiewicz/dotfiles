@@ -8,11 +8,11 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Programs with shortcut 💻
 bindsym $mod+Return exec alacritty
 bindsym $mod+g exec brave
-bindsym $mod+d exec "rofi -show drun -show-icons"
+bindsym $mod+d exec "rofi -show drun"
+bindsym $mod+e exec "rofi -show emoji"
+bindsym $mod+w exec "rofi -show window"
 # exec_always --no-startup-id dunst
 # exec_always --no-startup-id picom
-# TODO: change to rofi
-# bindsym $mod+d exec "rofi -combi-modi window,drun,emoji -show combi -modi emoji combi -show-icons"
 
 # Floating terminal - quicky
 for_window [ title="floating_terminal" ] floating enable
