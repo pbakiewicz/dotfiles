@@ -6,6 +6,9 @@ export PATH=$PATH:/home/pawel/go/bin
 # Musi być aby j działało
 eval "$(jump shell)"
 
+export HISTSIZE=10000
+export HISTFILESIZE=200000
+
 # Dla mozliwosci pozniej ssh-add
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent -t 12h > "$XDG_RUNTIME_DIR/ssh-agent.env"
