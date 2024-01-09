@@ -1,7 +1,0 @@
-#!/bin/bash
-set -u
-
-sudo lvremove /dev/volgroup0/root_*
-today=$(date +%Y%m%d)
-sudo lvcreate -L 20G -s -n root_snapshot_${today} /dev/mapper/volgroup0-lv_root
-sudo pacman -Syyu
