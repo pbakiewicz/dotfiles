@@ -9,9 +9,9 @@ local on_attach = function()
     vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer = 0})
     vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", {buffer = 0})
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, {buffer = 0})
-    -- gi przy pyright w ogóle nie istnieje! Ale przy językach gdzie przeciążamy funkcje ma fajne
-    -- zastosowanie, gdyż gd, pójdzie do structa gdzie zadeklarowaliśmy funkcję, ale może być
-    -- przecież w 5 miejscach przeciążona. I gi tam dojdzie.
+    -- gi przy pyright w ogóle nie istnieje, gdyz python nie ma osobnej deklaracji od
+    -- wlasciwej implementacji jak np. go gdzie deklarujemy funkcje w structcie, a
+    -- implementujemy ją poniżej.
     vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer = 0})
     -- gt trochę najdziwniejsze, gd pójdzie gdzie tą zmienną zadeklarowaliśmy, 
     -- a gt, czym ta zmienna faktycznie jest. W pythonie imho przy braku super
