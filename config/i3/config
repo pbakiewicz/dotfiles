@@ -4,6 +4,7 @@ for_window [class="^.*"] border pixel 0
 
 # Programs on startup
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id setxkbmap pl
 
 # Programs with shortcut 💻
 bindsym $mod+Return exec alacritty
