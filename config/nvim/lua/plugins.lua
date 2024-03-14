@@ -13,6 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 
 require("lazy").setup({
+    "voldikss/vim-floaterm",
     -- ogarnij lepiej te tabele w lua
     {
         "rebelot/kanagawa.nvim",
