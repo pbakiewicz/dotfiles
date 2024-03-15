@@ -22,5 +22,9 @@ require("lazy").setup({
             -- == lepsze w tym kejse niz >>>>
             vim.cmd.colorscheme("kanagawa-dragon")
         end,
+    },
+    {
+    'nvim-telescope/telescope.nvim', tag = '0.1.6',
+      dependencies = { 'nvim-lua/plenary.nvim' }
     }
 })
