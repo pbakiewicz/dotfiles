@@ -1,6 +1,8 @@
 #
 # ~/.bashrc
 #
+# dla sudoedit
+export EDITOR='nvim'
 # Dla odpalania go programików
 export PATH=$PATH:/home/pawel/go/bin
 # Musi być aby j działało
