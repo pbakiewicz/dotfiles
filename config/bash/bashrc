@@ -28,3 +28,10 @@ alias grep='grep --color=auto'
 alias vim='nvim'
 alias r='ranger'
 PS1='[\u@\h \W]\$ '
+
+# Po to aby zaciagał completion z customowego folderu.
+if [ -d ~/.bash_completion.d ]; then
+  for file in ~/.bash_completion.d/*; do
+    [ -f "$file" ] && . "$file"
+  done
+fi
