@@ -25,12 +25,9 @@ for k, v in pairs(options) do
     vim.opt[k] = v
 end
 
--- vim.g['sneak#label'] = 1
 
--- options for git blame
--- vim.g.gitblame_enabled = 0
--- vim.g.gitblame_date_format = "%r"
--- vim.g.gitblame_message_template = "<summary> * <date> * <author>"
+
+-- vim.g['sneak#label'] = 1
 
 -- vim test
 -- btw, co to za konstrukcja w lua z tym hashem?

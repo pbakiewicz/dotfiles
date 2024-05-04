@@ -1,5 +1,5 @@
-require('plugins')
 require('options')
+require('plugins')
 require('keymaps')
 -- require("colorscheme")
 -- require("completion")
