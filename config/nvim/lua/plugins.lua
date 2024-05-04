@@ -14,6 +14,14 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     "mhinz/vim-startify",
+    {
+        "f-person/git-blame.nvim",
+        opts = {
+            enabled = false, -- on startup disabled
+            date_format = "%r",
+            message_template = "<summary> * <date> * <author>"
+        },
+    },
     "voldikss/vim-floaterm",
     -- ogarnij lepiej te tabele w lua
     {

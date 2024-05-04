@@ -24,6 +24,10 @@ k("n", "<C-j>", "<C-w>j", opts)
 k("n", "<C-k>", "<C-w>k", opts)
 k("n", "<C-l>", "<C-w>l", opts)
 
+-- blame
+k("n", "<leader>b", ":GitBlameToggle<cr>", opts)
+k("n", "<leader>bo", ":GitBlameOpenCommitURL<cr>", opts)
+
 --quickfix list, mostly for putting data with <C-q> from telescope
 k("n", "]q", ":cnext<CR>", opts)
 k("n", "]Q", ":clast<CR>", opts)
