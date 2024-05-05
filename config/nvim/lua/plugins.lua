@@ -23,11 +23,10 @@ require("lazy").setup({
         },
     },
     "voldikss/vim-floaterm",
-    -- ogarnij lepiej te tabele w lua
     {
         "rebelot/kanagawa.nvim",
         config = function()
-            -- == lepsze w tym kejse niz >>>>
+            -- w lazy.nvim to jest obudowane w require(MAIN).setup(opts)
             vim.cmd.colorscheme("kanagawa-dragon")
         end,
     },
