@@ -13,3 +13,6 @@ if xrandr | grep "DP-1 connected" | grep -v "eDP-1"; then
 else
 	polybar laptop &
 fi
+
+# Ustawianie wallpapera bo inaczej jest krzywy.
+feh --bg-center "$(find $HOME/o/wallpapers/3440x1440/ -type f | shuf -n1)"
