@@ -18,12 +18,6 @@ k("n", "fg", "<cmd>lua require('telescope-config').live_grep()<cr>", opts)
 -- k("n", "<leader>/", "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find({sorting_strategy=ascending,})<cr>", opts)
 --
 
--- sane navigation
-k("n", "<C-h>", "<C-w>h", opts)
-k("n", "<C-j>", "<C-w>j", opts)
-k("n", "<C-k>", "<C-w>k", opts)
-k("n", "<C-l>", "<C-w>l", opts)
-
 -- blame
 k("n", "<leader>b", ":GitBlameToggle<cr>", opts)
 k("n", "<leader>bo", ":GitBlameOpenCommitURL<cr>", opts)
