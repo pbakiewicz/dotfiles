@@ -10,6 +10,10 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 if xrandr | grep "DP-1 connected" | grep -v "eDP-1"; then
 	xrandr --output eDP-1 --off
 	polybar krzywy &
+elif xrandr | grep "DP-4 connected"; then
+    # dla desktopa
+    xrandr --output DP-4 --mode 3440x1440 --rate 99.90
+    polybar krzywy &
 else
 	polybar laptop &
 fi

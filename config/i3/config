@@ -3,7 +3,7 @@ gaps inner 20
 for_window [class="^.*"] border pixel 0
 
 # Programs on startup
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/bin/set_resolution.sh
 exec_always --no-startup-id setxkbmap pl
 
 # Programs with shortcut 💻
