@@ -1,10 +1,17 @@
 #
 # ~/.bashrc
 #
+
+# Jeżeli shell jest non-interactive od razu wyjdź.
+# Na przykład przy cron jobach, skryptach odpalanych przez servicy etc.
+[[ $- != *i* ]] && return
+
 # dla sudoedit
 export EDITOR='nvim'
 # Dla odpalania go programików
 export PATH=$PATH:/home/pawel/go/bin
+# For pipx
+export PATH=$PATH:/home/pawel/.local/bin
 # Musi być aby j działało
 eval "$(jump shell)"
 
@@ -20,14 +27,18 @@ if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias vim='nvim'
 alias r='ranger'
 PS1='[\u@\h \W]\$ '
+
+# for gpg commit signing
+export GPG_TTY=$(tty)
+
+# for pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+eval "$(pyenv init -)"
 
 # Po to aby zaciagał completion z customowego folderu.
 if [ -d ~/.bash_completion.d ]; then
