@@ -32,6 +32,8 @@ alias grep='grep --color=auto'
 alias vim='nvim'
 alias r='ranger'
 PS1='[\u@\h \W]\$ '
+alias tn='tmux new -s $(pwd | sed "s/.*\///g")'
+alias e='exit'
 
 # for gpg commit signing
 export GPG_TTY=$(tty)
