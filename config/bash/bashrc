@@ -15,8 +15,12 @@ export PATH=$PATH:/home/pawel/.local/bin
 # Musi być aby j działało
 eval "$(jump shell)"
 
-HISTSIZE=10000
-HISTFILESIZE=200000
+# igorespace nie zapisuje komend ze spacja
+HISTCONTROL=ignorespace:ignoredups
+# Żeby nie gubić historii, ale przy duzym HISTSIZE raczej nie ma znaczenia.
+shopt -s histappend
+HISTSIZE=100000
+HISTFILESIZE=100000
 HISTTIMEFORMAT="%d/%m/%y %T "
 
 # Dla mozliwosci pozniej ssh-add
