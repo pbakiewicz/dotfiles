@@ -17,7 +17,6 @@ local options = {
     shiftwidth = 4,
     -- naucz sie lepiej tego block visual
     virtualedit = "block",
-    wrap = false,
     termguicolors = true,
 }
 
