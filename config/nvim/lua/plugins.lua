@@ -62,4 +62,9 @@ require("lazy").setup({
             { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
         },
     },
+    -- completion stuff
+    "hrsh7th/nvim-cmp",
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-emoji",
+
 })
