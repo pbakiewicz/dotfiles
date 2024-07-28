@@ -35,8 +35,10 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias vim='nvim'
 alias r='ranger'
-alias tn='tmux new -s $(pwd | sed "s/.*\///g")'
+alias t='tmux new -s $(pwd | sed "s/.*\///g")'
 alias e='exit'
+alias ..="cd .."
+alias ...="cd ../../"
 PS1='\n\[\e[1;34m\]\W\[\e[0m\] \n\[\e[1;97m\] \[\e[0m\] '
 
 # for gpg commit signing
