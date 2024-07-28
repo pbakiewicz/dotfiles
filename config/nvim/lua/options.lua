@@ -18,6 +18,8 @@ local options = {
     -- naucz sie lepiej tego block visual
     virtualedit = "block",
     termguicolors = true,
+    -- bardzo annoying jak czyta się i wrapuje w środku słowa
+    linebreak = true,
 }
 
 for k, v in pairs(options) do
