@@ -28,7 +28,8 @@ end
 
 
 
--- vim.g['sneak#label'] = 1
+vim.g['sneak#label'] = 1
+
 
 -- vim test
 -- btw, co to za konstrukcja w lua z tym hashem?

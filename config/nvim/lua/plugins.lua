@@ -75,5 +75,7 @@ require("lazy").setup({
     "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-emoji",
+    -- sneak
+    "justinmk/vim-sneak",
 
 })
