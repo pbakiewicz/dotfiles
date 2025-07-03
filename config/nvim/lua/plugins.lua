@@ -77,5 +77,14 @@ require("lazy").setup({
     "hrsh7th/cmp-emoji",
     -- sneak
     "justinmk/vim-sneak",
+    -- lsp
+    {
+      "neovim/nvim-lspconfig",
+       config = function()
+           vim.lsp.enable("pyright");
+           vim.lsp.enable("dockerls");
+
+       end,
+    }
 
 })
