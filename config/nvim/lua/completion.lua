@@ -40,6 +40,7 @@ cmp.setup {
     },
     sources = {
         { name = "buffer", keyword_length = 5},
-        { name = "emoji", insert = true }
+        { name = "emoji", insert = true },
+        { name = "path" },
     },
 }

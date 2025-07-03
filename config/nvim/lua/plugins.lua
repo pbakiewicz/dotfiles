@@ -75,6 +75,7 @@ require("lazy").setup({
     "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-emoji",
+    "hrsh7th/cmp-path",
     -- sneak
     "justinmk/vim-sneak",
     -- lsp
