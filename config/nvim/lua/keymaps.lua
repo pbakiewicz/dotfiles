@@ -13,7 +13,7 @@ k("n", "fc", ":Telescope colorscheme<CR>", opts)
 k("n", "fm", ":Telescope marks<CR>", opts)
 k("n", "fg", "<cmd>lua require('telescope-config').live_grep()<cr>", opts)
 -- k("n", "fs", "<cmd>lua require('telescope.builtin').lsp_workspace_symbols({ignore_symbols='variable', query=vim.fn.input('Podaj symbol: ')})<CR>", opts)
--- k("n", "<leader>f", "<cmd>lua require('telescope-config').file_browser()<cr>", opts)
+k("n", "<leader>f", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", opts)
 -- k("n", "\\", ":Telescope lsp_document_symbols<CR>", opts)
 -- k("n", "<leader>/", "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find({sorting_strategy=ascending,})<cr>", opts)
 --

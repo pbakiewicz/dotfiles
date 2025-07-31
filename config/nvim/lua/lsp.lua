@@ -18,7 +18,7 @@ local on_attach = function()
     vim.keymap.set("n", "dj", vim.diagnostic.goto_next, {buffer = 0})
     vim.keymap.set("n", "dk", vim.diagnostic.goto_prev, {buffer = 0})
     vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {buffer=0})
-    vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format() end, {buffer = 0})
+    vim.keymap.set("n", "<leader>ff", function() vim.lsp.buf.format() end, {buffer = 0})
 end
 
 local diagnostic_config = {
