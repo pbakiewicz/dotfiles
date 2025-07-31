@@ -8,3 +8,6 @@ keybind = ctrl+h=goto_split:left
 keybind = ctrl+l=goto_split:right
 keybind = ctrl+n=new_tab
 keybind = ctrl+tab=next_tab
+
+gtk-tabs-location = bottom
+gtk-wide-tabs      = false
