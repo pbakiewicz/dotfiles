@@ -109,27 +109,37 @@ require("lazy").setup({
       "mfussenegger/nvim-dap",
       keys = {
         {
-          "<leader>db",
+          "<space>b",
           function() require("dap").toggle_breakpoint() end,
-          desc = "Toggle Breakpoint"
         },
 
         {
-          "<leader>dc",
+          "<F1>",
           function() require("dap").continue() end,
-          desc = "Continue"
         },
 
         {
-          "<leader>dC",
+          "<F2>",
+          function() require("dap").step_over() end,
+        },
+        {
+          "<F3>",
           function() require("dap").run_to_cursor() end,
+        },
+        {
+          "<F4>",
+          function() require("dap").step_into() end,
+        },
+
+        {
+          "<F5>",
+          function() require("dap").step_out() end,
           desc = "Run to Cursor"
         },
 
         {
-          "<leader>dT",
+          "<F12>",
           function() require("dap").terminate() end,
-          desc = "Terminate"
         },
       },
     },
