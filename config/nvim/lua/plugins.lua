@@ -148,10 +148,6 @@ require("lazy").setup({
     {
       -- tutaj dodatkowy plugin zalatwiajacy od razu konfiguracje do pythona
       "mfussenegger/nvim-dap-python",
-      -- to akurat musi byc bo inaczej ze nie znalazlo konfiguracji.
-      config = function()
-        require("dap-python").setup(python)
-      end,
       -- Consider the mappings at
       -- https://github.com/mfussenegger/nvim-dap-python?tab=readme-ov-file#mappings
       dependencies = {
