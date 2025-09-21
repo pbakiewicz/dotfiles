@@ -97,5 +97,12 @@ require("lazy").setup({
        -- te opts akurat, ze ponoc nie bede musial setupowac tego plugin explicite
         opts = {}
     },
+    -- comments
+    {
+    'numToStr/Comment.nvim',
+    opts = {
+        -- add any options here
+    },
+},
 
 })
