@@ -90,6 +90,12 @@ require("lazy").setup({
            vim.lsp.enable("dockerls");
 
        end,
-    }
+    },
+    -- mason aby installowac lsp/dap/lintery itd. tylko dla neovim
+    {
+       "mason-org/mason.nvim",
+       -- te opts akurat, ze ponoc nie bede musial setupowac tego plugin explicite
+        opts = {}
+    },
 
 })
