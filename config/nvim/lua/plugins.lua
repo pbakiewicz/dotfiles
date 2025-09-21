@@ -103,6 +103,50 @@ require("lazy").setup({
     opts = {
         -- add any options here
     },
+    -- debugging
+    {
+      -- tutaj ten glowny plugin umozliwiajacy polaczenie sie z serwerem dap
+      "mfussenegger/nvim-dap",
+      keys = {
+        {
+          "<leader>db",
+          function() require("dap").toggle_breakpoint() end,
+          desc = "Toggle Breakpoint"
+        },
+
+        {
+          "<leader>dc",
+          function() require("dap").continue() end,
+          desc = "Continue"
+        },
+
+        {
+          "<leader>dC",
+          function() require("dap").run_to_cursor() end,
+          desc = "Run to Cursor"
+        },
+
+        {
+          "<leader>dT",
+          function() require("dap").terminate() end,
+          desc = "Terminate"
+        },
+      },
+    },
+
+    {
+      -- tutaj dodatkowy plugin zalatwiajacy od razu konfiguracje do pythona
+      "mfussenegger/nvim-dap-python",
+      -- to akurat musi byc bo inaczej ze nie znalazlo konfiguracji.
+      config = function()
+        require("dap-python").setup(python)
+      end,
+      -- Consider the mappings at
+      -- https://github.com/mfussenegger/nvim-dap-python?tab=readme-ov-file#mappings
+      dependencies = {
+        "mfussenegger/nvim-dap",
+      },
+    },
 },
 
 })
