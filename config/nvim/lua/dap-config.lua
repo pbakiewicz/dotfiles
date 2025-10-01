@@ -2,6 +2,9 @@ require("dap-python").setup(python)
 
 
 local dap = require("dap")
+local dapui = require("dapui")
+
+dapui.setup()
 
 -- keymaps
 local k = vim.keymap.set
@@ -12,6 +15,7 @@ k("n", "<F2>", dap.step_over)
 k("n", "<F3>", dap.run_to_cursor)
 k("n", "<F4>", dap.step_into)
 k("n", "<F5>", dap.step_out)
+k("n", "<F11>", dapui.open)
 k("n", "<F12>", dap.terminate)
 
 -- usuniecie defaultow niepotrzebnych
