@@ -106,45 +106,11 @@ require("lazy").setup({
     },
     -- debugging
     {
-      -- tutaj ten glowny plugin umozliwiajacy polaczenie sie z serwerem dap
-      "mfussenegger/nvim-dap",
-      keys = {
-        {
-          "<space>b",
-          function() require("dap").toggle_breakpoint() end,
-        },
-
-        {
-          "<F1>",
-          function() require("dap").continue() end,
-        },
-
-        {
-          "<F2>",
-          function() require("dap").step_over() end,
-        },
-        {
-          "<F3>",
-          function() require("dap").run_to_cursor() end,
-        },
-        {
-          "<F4>",
-          function() require("dap").step_into() end,
-        },
-
-        {
-          "<F5>",
-          function() require("dap").step_out() end,
-          desc = "Run to Cursor"
-        },
-
-        {
-          "<F12>",
-          function() require("dap").terminate() end,
-        },
-      },
+      "mfussenegger/nvim-dap", -- glowny plugin laczacy z serwerem dap
+      config = function()
+        require("dap-config")
+      end,
     },
-
     {
       -- tutaj dodatkowy plugin zalatwiajacy od razu konfiguracje do pythona
       "mfussenegger/nvim-dap-python",
