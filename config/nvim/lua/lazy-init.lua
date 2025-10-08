@@ -84,21 +84,6 @@ require("lazy").setup({
     "hrsh7th/cmp-path",
     -- sneak
     "justinmk/vim-sneak",
-    -- lsp
-    {
-      "neovim/nvim-lspconfig",
-       config = function()
-           vim.lsp.enable("pyright");
-           vim.lsp.enable("dockerls");
-
-       end,
-    },
-    -- mason aby installowac lsp/dap/lintery itd. tylko dla neovim
-    {
-       "mason-org/mason.nvim",
-       -- te opts akurat, ze ponoc nie bede musial setupowac tego plugin explicite
-        opts = {}
-    },
     -- comments
     {
     'numToStr/Comment.nvim',
