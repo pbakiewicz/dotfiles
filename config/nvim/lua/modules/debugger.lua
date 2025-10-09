@@ -18,16 +18,16 @@ local function setup_dap()
 
     -- Automatyczne otwieranie/zamykanie dapui.
     dap.listeners.before.attach.dapui_config = function()
-      dapui.open()
+        dapui.open()
     end
     dap.listeners.before.launch.dapui_config = function()
-      dapui.open()
+        dapui.open()
     end
     dap.listeners.before.event_terminated.dapui_config = function()
-      dapui.close()
+        dapui.close()
     end
     dap.listeners.before.event_exited.dapui_config = function()
-      dapui.close()
+        dapui.close()
     end
 
     -- Tutaj aby podłączał się do konkretnych debuggerów.
@@ -36,19 +36,19 @@ local function setup_dap()
 
     -- Docker attach
     table.insert(require("dap").configurations.python, {
-      name = 'docker django',
-      type = 'python',
-      request = 'attach',
-      connect = {
-          host = 'localhost',
-          port = 5678,
-      },
-      pathMappings = {
-          {
-              localRoot = vim.fn.getcwd(),
-              remoteRoot = "/app",
-          }
-    },
+        name = 'docker django',
+        type = 'python',
+        request = 'attach',
+        connect = {
+            host = 'localhost',
+            port = 5678,
+        },
+        pathMappings = {
+            {
+                localRoot = vim.fn.getcwd(),
+                remoteRoot = "/app",
+            }
+        },
         justMyCode = false,
         django = true,
     })
@@ -59,25 +59,24 @@ local function setup_dap()
         name = "Local django",
         type = "python",
         request = "launch",
-        python = {"/home/pawel/projekt/.venv/bin/python3"},
+        python = { "/home/pawel/projekt/.venv/bin/python3" },
         justMyCode = false,
         django = true,
         program = "/home/pawel/projekt/manage.py",
-        args = {"runserver", "--noreload"},
+        args = { "runserver", "--noreload" },
     })
-
 end
 
 return {
-    { "mfussenegger/nvim-dap", config = setup_dap},
+    { "mfussenegger/nvim-dap", config = setup_dap },
     {
-      -- tutaj dodatkowy plugin zalatwiajacy od razu konfiguracje do pythona
-      "mfussenegger/nvim-dap-python",
-      -- Consider the mappings at
-      -- https://github.com/mfussenegger/nvim-dap-python?tab=readme-ov-file#mappings
-      dependencies = {
-        "mfussenegger/nvim-dap",
-      },
+        -- tutaj dodatkowy plugin zalatwiajacy od razu konfiguracje do pythona
+        "mfussenegger/nvim-dap-python",
+        -- Consider the mappings at
+        -- https://github.com/mfussenegger/nvim-dap-python?tab=readme-ov-file#mappings
+        dependencies = {
+            "mfussenegger/nvim-dap",
+        },
     },
-    { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
+    { "rcarriga/nvim-dap-ui",  dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
 }

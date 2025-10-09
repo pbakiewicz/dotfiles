@@ -33,12 +33,13 @@ require("lazy").setup({
         end,
     },
     {
-        'nvim-telescope/telescope.nvim', tag = '0.1.6',
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.6',
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
     {
-    "nvim-telescope/telescope-file-browser.nvim",
-    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+        "nvim-telescope/telescope-file-browser.nvim",
+        dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
     },
     {
         "nvim-treesitter/nvim-treesitter",
@@ -59,7 +60,6 @@ require("lazy").setup({
                     }
                 },
             })
-
         end,
     },
     {
@@ -86,10 +86,10 @@ require("lazy").setup({
     "justinmk/vim-sneak",
     -- comments
     {
-    'numToStr/Comment.nvim',
-    opts = {
-        -- add any options here
-      },
+        'numToStr/Comment.nvim',
+        opts = {
+            -- add any options here
+        },
     },
     { import = "modules" },
 
