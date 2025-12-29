@@ -14,7 +14,7 @@ local function setup_lsp()
         vim.keymap.set("n", "dj", vim.diagnostic.goto_next, { buffer = 0 })
         vim.keymap.set("n", "dk", vim.diagnostic.goto_prev, { buffer = 0 })
         vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, { buffer = 0 })
-        vim.keymap.set("n", "<leader>ff", function() vim.lsp.buf.format() end, { buffer = 0 })
+        vim.keymap.set("n", "<leader>ff", function() require("conform").format({ lsp_format = "fallback" }) end, { buffer = 0 })
     end
 
     local diagnostic_config = {
@@ -34,9 +34,6 @@ local function setup_lsp()
             diagnostics = diagnostic_config,
         })
     end
-
-    vim.lsp.enable("pyright");
-    vim.lsp.enable("dockerls");
 end
 
 return {
@@ -50,7 +47,15 @@ return {
     },
     {
         "mason-org/mason-lspconfig.nvim",
-        opts = { ensure_installed = { "lua_ls" } }
-    }
+        opts = { ensure_installed = { "lua_ls", "pyright", "dockerls" } }
+    },
+    {
+        'stevearc/conform.nvim', -- aby połączyć blacka z LSP
+        opts = {
+            formatters_by_ft = {
+                python = { "black" },
+            },
+        }
+    },
 
 }
