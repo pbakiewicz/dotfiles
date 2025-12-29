@@ -1,3 +1,22 @@
+config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
+
+# Font
+font-family = "CaskaydiaMono Nerd Font"
+font-style = Regular
+font-size = 9
+
+# Window
+window-padding-x = 14
+window-padding-y = 14
+confirm-close-surface=false
+resize-overlay = never
+
+# Cursor stlying
+cursor-style = "block"
+cursor-style-blink = false
+shell-integration-features = no-cursor
+
+# Split bindings
 keybind = shift+ctrl+h=new_split:left
 keybind = shift+ctrl+j=new_split:down
 keybind = shift+ctrl+k=new_split:up
@@ -6,8 +25,13 @@ keybind = ctrl+k=goto_split:up
 keybind = ctrl+j=goto_split:down
 keybind = ctrl+h=goto_split:left
 keybind = ctrl+l=goto_split:right
-keybind = ctrl+n=new_tab
-keybind = ctrl+tab=next_tab
 
+# Tabs bindings
+keybind = ctrl+n=new_tab
+keybind = ctrl+]=next_tab
+keybind = ctrl+[=previous_tab
+
+# Other
 gtk-tabs-location = bottom
 gtk-wide-tabs      = false
+mouse-scroll-multiplier = 0.95
