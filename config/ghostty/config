@@ -3,7 +3,7 @@ config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
 # Font
 font-family = "CaskaydiaMono Nerd Font"
 font-style = Regular
-font-size = 9
+font-size = 11
 
 # Window
 window-padding-x = 14
@@ -21,10 +21,10 @@ keybind = shift+ctrl+h=new_split:left
 keybind = shift+ctrl+j=new_split:down
 keybind = shift+ctrl+k=new_split:up
 keybind = shift+ctrl+l=new_split:right
-keybind = ctrl+k=goto_split:up
-keybind = ctrl+j=goto_split:down
-keybind = ctrl+h=goto_split:left
-keybind = ctrl+l=goto_split:right
+keybind = unconsumed:ctrl+k=goto_split:up
+keybind = unconsumed:ctrl+j=goto_split:down
+keybind = unconsumed:ctrl+h=goto_split:left
+keybind = unconsumed:ctrl+l=goto_split:right
 
 # Tabs bindings
 keybind = ctrl+n=new_tab
