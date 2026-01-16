@@ -1,0 +1,10 @@
+{
+    "modules-right": [
+    "tray",
+    "bluetooth",
+    "network",
+    "pulseaudio",
+    "cpu",
+    "battery"
+  ]
+}
