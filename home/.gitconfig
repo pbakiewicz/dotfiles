@@ -1,0 +1,14 @@
+[alias]
+    b = branch
+    cp = cherry-pick
+    l = log --graph --oneline --decorate
+    s = status
+    p = pull
+    c = checkout
+[user]
+    email = pbakiewicz@icloud.com
+	name = Paweł Bąkiewicz
+[core]
+    editor = nvim
+[commit]
+	gpgSign = true
