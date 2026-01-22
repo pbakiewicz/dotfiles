@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(**/*sa.json)",
+      "Read(**/*service-account*.json)",
+      "Read(~/.config/gcloud/**)",
+      "Read(~/.aws/**)",
+      "Read(**/*credentials*)",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(~/.ssh/**)",
+      "Read(~/.gnupg/**)",
+      "Read(./secrets/**)",
+      "Read(**/*secret*.json)",
+      "Read(**/*secret*.yml)",
+      "Read(**/*password*.txt)",
+      "Read(**/*token*.json)",
+      "Read(~/.kube/config)",
+      "Read(**/*database.yml)",
+      "Read(**/*db-config*.json)"
+    ]
+  }
+}
