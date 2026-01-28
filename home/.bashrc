@@ -10,8 +10,9 @@ export PATH="$HOME/o/bin:$PATH"
 
 alias vim=nvim
 alias v=nvim
-# zeoxicde jakos sie do jumpa przyzwyczayilem.
-alias j=z
+# zoxide chciałbym mieć pod "j" i nie chciałbym aby działało mi pod "cd"
+eval "$(zoxide init bash --cmd j)"
+alias cd="builtin cd"
 
 
 # Set a custom prompt with the directory revealed (alternatively use https://starship.rs)
